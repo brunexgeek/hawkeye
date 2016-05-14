@@ -1,2 +1,3 @@
-# hawkeye
-Cross-platform C++ game engine
+# Hawkeye
+
+Cross-platform C++ game engine.
