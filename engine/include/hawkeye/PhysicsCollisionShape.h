@@ -13,7 +13,7 @@
 #define BQ(q) (btQuaternion((q).x, (q).y, (q).z, (q).w))
 
 
-namespace gameplay
+namespace hawkeye
 {
     class Node;
     class Properties;

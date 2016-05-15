@@ -84,7 +84,7 @@ struct TouchPointerData
 TouchPointerData __pointer0;
 TouchPointerData __pointer1;
 
-namespace gameplay
+namespace hawkeye
 {
 
 

@@ -60,7 +60,7 @@ void FontSample::initialize()
         _fonts.push_back(f);
     }
     _font = _fonts[0];
-    
+
     _sampleString = std::string("Lorem ipsum dolor sit amet, \n" \
                                 "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n" \
                                 "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n" \
@@ -104,7 +104,7 @@ void FontSample::render(float elapsedTime)
     _fonts[0]->start();
 
     _fonts[0]->drawText(fps, 245, 5, Vector4(0, 0.5f, 1, 1), _size);
-    
+
     if (_font != _fonts[0])
         _font->start();
 
@@ -123,10 +123,10 @@ void FontSample::render(float elapsedTime)
     else
     {
         // Sample viewport versions.
-        gameplay::Rectangle area;
+        hawkeye::Rectangle area;
         _font->measureText(_sampleString.c_str(), _viewport, _size, &area, _alignment, _wrap, _ignoreClip);
         _font->drawText(_sampleString.c_str(), _useViewport? _viewport : area, Vector4::fromColor(0xffffffff), _size, _alignment, _wrap, _rightToLeft);
-    
+
         _font->drawText("'", _viewport.x, _viewport.y, Vector4::fromColor(0x00ff00ff), _size);
         _font->drawText(".", _viewport.x, _viewport.y + _viewport.height, Vector4::fromColor(0x00ff00ff), _size);
         _font->drawText("'", _viewport.x + _viewport.width, _viewport.y, Vector4::fromColor(0x00ff00ff), _size);

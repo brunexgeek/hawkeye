@@ -2,7 +2,7 @@
 #include "BoundingSphere.h"
 #include "BoundingBox.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 BoundingSphere::BoundingSphere()

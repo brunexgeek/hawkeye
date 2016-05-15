@@ -1,78 +1,69 @@
-#ifndef AUDIOCONTROLLER_H_
-#define AUDIOCONTROLLER_H_
+#ifndef HAWKEYE_AUDIOCONTROLLER_HH
+#define HAWKEYE_AUDIOCONTROLLER_HH
 
-#include <hawkeye/openal.h>
 
-namespace gameplay
+namespace hawkeye
 {
 
-class AudioListener;
-class AudioSource;
+	class AudioListener;
+	class AudioSource;
 
-/**
- * Defines a class for controlling game audio.
- */
-class AudioController
-{
-    friend class Game;
-    friend class AudioSource;
+	/**
+	 * Defines a class for controlling game audio.
+	 */
+	class AudioController
+	{
+		friend class Game;
+		friend class AudioSource;
 
-public:
+	public:
 
-    /**
-     * Destructor.
-     */
-    virtual ~AudioController();
+		/**
+		 * Destructor.
+		 */
+		virtual ~AudioController();
 
-private:
+	protected:
 
-    /**
-     * Constructor.
-     */
-    AudioController();
+		/**
+		 * Constructor.
+		 */
+		AudioController();
 
-    /**
-     * Controller initialize.
-     */
-    void initialize();
+		/**
+		 * Controller initialize.
+		 */
+		virtual void initialize() = 0;
 
-    /**
-     * Controller finalize.
-     */
-    void finalize();
+		/**
+		 * Controller finalize.
+		 */
+		virtual void finalize() = 0;
 
-    /**
-     * Controller pause.
-     */
-    void pause();
+		/**
+		 * Controller pause.
+		 */
+		virtual void pause() = 0;
 
-    /**
-     * Controller resume.
-     */
-    void resume();
+		/**
+		 * Controller resume.
+		 */
+		virtual void resume() = 0;
 
-    /**
-     * Controller update.
-     */
-    void update(float elapsedTime);
+		/**
+		 * Controller update.
+		 */
+		virtual void update(
+			float elapsedTime ) = 0;
 
-    void addPlayingSource(AudioSource* source);
+		virtual void addPlayingSource(
+			AudioSource* source ) = 0;
 
-    void removePlayingSource(AudioSource* source);
+		virtual void removePlayingSource(
+			AudioSource* source ) = 0;
 
-    static void streamingThreadProc(void* arg);
-
-    ALCdevice* _alcDevice;
-    ALCcontext* _alcContext;
-    std::set<AudioSource*> _playingSources;
-    std::set<AudioSource*> _streamingSources;
-    AudioSource* _pausingSource;
-
-    bool _streamingThreadActive;
-    std::unique_ptr<std::thread> _streamingThread;
-    std::unique_ptr<std::mutex> _streamingMutex;
-};
+	};
 
 }
 
-#endif
+#endif  // HAWKEYE_AUDIOCONTROLLER_HH

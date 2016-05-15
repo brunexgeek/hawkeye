@@ -3,8 +3,7 @@
 
 #include "Ref.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 class AIAgent;
 class AIStateMachine;
@@ -34,7 +33,7 @@ public:
          */
         virtual ~Listener();
 
-        /** 
+        /**
          * Called when a state is entered.
          *
          * @param agent The AIAgent this state event is for.
@@ -81,7 +80,7 @@ public:
 
     /**
      * Sets a listener to dispatch state events to.
-     * 
+     *
      * @param listener Listener to dispatch state events to, or NULL to disable event dispatching.
      */
     void setListener(Listener* listener);

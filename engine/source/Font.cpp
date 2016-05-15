@@ -11,7 +11,7 @@
 #define FONT_VSH "res/shaders/font.vert"
 #define FONT_FSH "res/shaders/font.frag"
 
-namespace gameplay
+namespace hawkeye
 {
 
 static std::vector<Font*> __fontCache;

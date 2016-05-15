@@ -4,7 +4,7 @@
 #include "Ref.h"
 #include "VertexFormat.h"
 #include <hawkeye/opengl.h>
-namespace gameplay
+namespace hawkeye
 {
 
 class Mesh;

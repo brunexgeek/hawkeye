@@ -11,7 +11,7 @@
 #define BV(v) (btVector3((v).x, (v).y, (v).z))
 #define BQ(q) (btQuaternion((q).x, (q).y, (q).z, (q).w))
 
-namespace gameplay
+namespace hawkeye
 {
     class PhysicsRigidBody;
     class Node;

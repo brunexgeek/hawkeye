@@ -3,8 +3,7 @@
 #include "AbsoluteLayout.h"
 #include "Container.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 static AbsoluteLayout* __instance;
 

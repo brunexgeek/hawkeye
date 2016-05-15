@@ -3,10 +3,10 @@
 
 #include "gameplay.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
- * Base class for all of the samples. 
+ * Base class for all of the samples.
  *
  * The goal is to provide an interface that matches the Game class.
  * This way you can easily copy the code from your sample into a game.
@@ -91,7 +91,7 @@ protected:
 
 private:
 
-    Sample(const Sample&); 
+    Sample(const Sample&);
     Sample& operator=(const Sample&);
 };
 

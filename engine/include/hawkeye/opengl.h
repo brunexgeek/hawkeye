@@ -70,7 +70,7 @@
 
 
 // Hardware buffer
-namespace gameplay
+namespace hawkeye
 {
 /** Vertex attribute. */
 typedef GLint VertexAttribute;

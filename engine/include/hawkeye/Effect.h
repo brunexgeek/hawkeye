@@ -8,8 +8,7 @@
 #include "Matrix.h"
 #include "Texture.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 class Uniform;
 
@@ -33,7 +32,7 @@ public:
      * @param vshPath The path to the vertex shader file.
      * @param fshPath The path to the fragment shader file.
      * @param defines A new-line delimited list of preprocessor defines. May be NULL.
-     * 
+     *
      * @return The created effect.
      */
     static Effect* createFromFile(const char* vshPath, const char* fshPath, const char* defines = NULL);
@@ -44,7 +43,7 @@ public:
      * @param vshSource The vertex shader source code.
      * @param fshSource The fragment shader source code.
      * @param defines A new-line delimited list of preprocessor defines. May be NULL.
-     * 
+     *
      * @return The created effect.
      */
     static Effect* createFromSource(const char* vshSource, const char* fshSource, const char* defines = NULL);
@@ -59,7 +58,7 @@ public:
      * Returns the vertex attribute handle for the vertex attribute with the specified name.
      *
      * @param name The name of the vertex attribute to return.
-     * 
+     *
      * @return The vertex attribute, or -1 if no such vertex attribute exists.
      */
     VertexAttribute getVertexAttribute(const char* name) const;
@@ -68,23 +67,23 @@ public:
      * Returns the uniform handle for the uniform with the specified name.
      *
      * @param name The name of the uniform to return.
-     * 
+     *
      * @return The uniform, or NULL if no such uniform exists.
      */
     Uniform* getUniform(const char* name) const;
 
     /**
      * Returns the specified active uniform.
-     * 
+     *
      * @param index The index of the uniform to return.
-     * 
+     *
      * @return The uniform, or NULL if index is invalid.
      */
     Uniform* getUniform(unsigned int index) const;
 
     /**
      * Returns the number of active uniforms in this effect.
-     * 
+     *
      * @return The number of active uniforms.
      */
     unsigned int getUniformCount() const;
@@ -259,14 +258,14 @@ public:
 
     /**
      * Returns the name of this uniform.
-     * 
+     *
      * @return The name of the uniform.
      */
     const char* getName() const;
 
     /**
      * Returns the OpenGL uniform type.
-     * 
+     *
      * @return The OpenGL uniform type.
      */
     const GLenum getType() const;

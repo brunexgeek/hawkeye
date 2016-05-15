@@ -1,8 +1,7 @@
 #ifndef AIMESSAGE_H_
 #define AIMESSAGE_H_
 
-namespace gameplay
-{
+namespace hawkeye {
 
 /**
  * Defines a simple message structure used for passing messages through
@@ -57,7 +56,7 @@ public:
      * Destroys an AIMessage.
      *
      * Under normal circumstances this method does not need to be called since the
-     * AIController will automatically destroy an AIMessage once it has been 
+     * AIController will automatically destroy an AIMessage once it has been
      * sent. However, in the rare case where an AIMessage is constructed and not
      * passed to AIController::sendMessage, this method should be called to destroy
      * the message.
@@ -189,12 +188,12 @@ public:
 
     /**
      * Returns the number of parameters for this message.
-     * 
+     *
      * @return The number of message parameters.
      */
     unsigned int getParameterCount() const;
 
-    /** 
+    /**
      * Returns the type of the specified parameter.
      *
      * @param index Index of the parameter to query.

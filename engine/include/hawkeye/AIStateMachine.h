@@ -3,8 +3,7 @@
 
 #include "AIState.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 class AIAgent;
 

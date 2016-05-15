@@ -3,7 +3,7 @@
 #include "Node.h"
 #include "PhysicsRigidBody.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 PhysicsSpringConstraint::PhysicsSpringConstraint(PhysicsRigidBody* a, PhysicsRigidBody* b)

@@ -4,7 +4,7 @@
 #include "gameplay.h"
 #include "Sample.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
  * Sample testing the font with various functionality.

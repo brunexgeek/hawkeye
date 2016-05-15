@@ -3,7 +3,7 @@
 
 #include "gameplay.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
  * FirstPersonCamera controls a camera like a first person shooter game.
@@ -29,21 +29,21 @@ public:
 
     /**
      * Gets root node. May be NULL if not initialized.
-     * 
+     *
      * @return Root node or NULL.
      */
     Node* getRootNode();
 
     /**
      * Gets the camera. May be NULL.
-     * 
+     *
      * @return Camera or NULL.
      */
     Camera* getCamera();
 
     /**
      * Sets the position of the camera.
-     * 
+     *
      * @param position The position to move to.
      */
     void setPosition(const Vector3& position);
@@ -74,7 +74,7 @@ public:
 
     /**
      * Rotates the camera in place in order to change the direction it is looking.
-     * 
+     *
      * @param yaw Rotates the camera around the yaw axis in radians. Positive looks right, negative looks left.
      * @param pitch Rotates the camera around the ptich axis in radians. Positive looks up, negative looks down.
      */

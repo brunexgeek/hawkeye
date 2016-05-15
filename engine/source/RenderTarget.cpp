@@ -1,7 +1,7 @@
 #include "Base.h"
 #include "RenderTarget.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 static std::vector<RenderTarget*> __renderTargets;

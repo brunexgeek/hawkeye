@@ -1,9 +1,9 @@
 include(BuildHelpers.CMakeLists.txt)
 
 include_directories(
-        "${CMAKE_SOURCE_DIR}/engine/include"
-        "${CMAKE_SOURCE_DIR}/external-deps/include"
-)
+	"${CMAKE_SOURCE_DIR}/engine/include"
+	"${CMAKE_SOURCE_DIR}/3rd-party/include")
+
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     find_package(OpenGL REQUIRED)
@@ -50,28 +50,25 @@ ELSE(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     add_definitions(-D__linux__)
 
     IF(ARCH_DIR STREQUAL "x64")
-        link_directories(${CMAKE_SOURCE_DIR}/external-deps/lib/linux/x86_64)
+        link_directories("${CMAKE_CURRENT_BINARY_DIR}/../engine")
+        link_directories("${CMAKE_CURRENT_BINARY_DIR}/..")
     ELSE()
-        link_directories(${CMAKE_SOURCE_DIR}/external-deps/lib/linux/x86)
-    ENDIF(ARCH_DIR STREQUAL "x64")
-
+        link_directories("${CMAKE_CURRENT_BINARY_DIR}/../engine")
+        link_directories("${CMAKE_CURRENT_BINARY_DIR}/..")
+    ENDIF()
 
     set(GAMEPLAY_LIBRARIES
             stdc++
             engine
-            gameplay-deps
+            hawkeye-deps
             m
             GL
             rt
             dl
             X11
             pthread
-            gtk-x11-2.0
             glib-2.0
-            gobject-2.0
             )
 ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-
-add_definitions(-std=c++11)
 
 add_subdirectory(browser)

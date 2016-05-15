@@ -4,7 +4,7 @@
 #include "gameplay.h"
 #include "Sample.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
  * Macro for adding a sample. The purpose is to put the code that adds the sample in the class's cpp file.
@@ -36,7 +36,7 @@ public:
     SamplesGame();
 
     void resizeEvent(unsigned int width, unsigned int height);
-    
+
 	void keyEvent(Keyboard::KeyEvent evt, int key);
 
     void touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int contactIndex);
@@ -46,9 +46,9 @@ public:
     void menuEvent();
 
     void gestureSwipeEvent(int x, int y, int direction);
-    
+
     void gesturePinchEvent(int x, int y, float scale);
-    
+
     void gestureTapEvent(int x, int y);
 
 	void gestureLongTapEvent(int x, int y, float duration);
@@ -63,7 +63,7 @@ public:
 
     /**
      * Adds a sample.
-     * 
+     *
      * @param category The cateogry title to group the sample in.
      * @param title The title string of the sample.
      * @param func The function pointer that is used to create the sample.
@@ -72,7 +72,7 @@ public:
     static void addSample(const char* category, const char* title, void* func, unsigned int order);
 
     static SamplesGame* getInstance();
-    
+
 protected:
 
     /**
@@ -104,14 +104,14 @@ private:
 
     /**
      * Run the given sample.
-     * 
+     *
      * @param func The function pointer that creates the SampleGame.
      */
     void runSample(void* func);
 
     /**
      * Handles the activate when the user touches or clicks on a part of the screen.
-     * 
+     *
      * @param x The x-coordinate in screen space where the user clicked.
      * @param y The y-coordinate in screen space where the user clicked.
      */
@@ -121,7 +121,7 @@ private:
      * Exits the active sample and returns to the main menu.
      */
     void exitActiveSample();
-    
+
     /**
      * Draws the main menu, which is a list of all the available samples.
      */

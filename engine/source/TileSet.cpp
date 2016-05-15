@@ -3,7 +3,7 @@
 #include "Matrix.h"
 #include "Scene.h"
 
-namespace gameplay
+namespace hawkeye
 {
   
 TileSet::TileSet() : Drawable(),

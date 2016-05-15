@@ -1,7 +1,7 @@
 #include "Base.h"
 #include "MathUtil.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 void MathUtil::smooth(float* x, float target, float elapsedTime, float responseTime)

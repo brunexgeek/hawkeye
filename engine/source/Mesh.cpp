@@ -5,7 +5,7 @@
 #include "Model.h"
 #include "Material.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 Mesh::Mesh(const VertexFormat& vertexFormat) 

@@ -2,7 +2,7 @@
 #include "Light.h"
 #include "Node.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 Light::Light(Light::Type type, const Vector3& color) :

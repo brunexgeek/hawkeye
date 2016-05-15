@@ -4,7 +4,7 @@
 #include "AIMessage.h"
 #include "Game.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 AIStateMachine::AIStateMachine(AIAgent* agent)

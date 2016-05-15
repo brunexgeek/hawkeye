@@ -2,7 +2,7 @@
 #include "FileSystem.h"
 #include "ScriptController.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 Script* ScriptController::loadScript(const char* path, Script::Scope scope, bool forceReload)
@@ -148,12 +148,12 @@ Script* ScriptController::getCurrentScript() const
 
 void ScriptController::print(const char* str)
 {
-    gameplay::print("%s", str);
+    hawkeye::print("%s", str);
 }
 
 void ScriptController::print(const char* str1, const char* str2)
 {
-    gameplay::print("%s%s", str1, str2);
+    hawkeye::print("%s%s", str1, str2);
 }
 
 ScriptController::ScriptController()

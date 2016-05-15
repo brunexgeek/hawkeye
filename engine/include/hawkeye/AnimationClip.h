@@ -6,8 +6,7 @@
 #include "Animation.h"
 #include "ScriptTarget.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 class Animation;
 class AnimationValue;
@@ -45,14 +44,14 @@ public:
         /**
          * Constructor.
          */
-        Listener() 
+        Listener()
         {
         }
 
         /**
          * The type of animation event.
          */
-        enum EventType 
+        enum EventType
         {
             /**
              * Event fired when the clip begins.
@@ -69,7 +68,7 @@ public:
              */
             TIME
         };
-        
+
         /*
          * Destructor.
          */
@@ -98,7 +97,7 @@ public:
 
     /**
      * Gets the Animation that this AnimationClip was created from.
-     * 
+     *
      * @return The Animation that this clip was created from.
      */
     Animation* getAnimation() const;
@@ -112,7 +111,7 @@ public:
 
     /**
      * Gets the AnimationClip's end time.
-     * 
+     *
      * @return The time (in milliseconds) that the AnimationClip will end.
      */
     unsigned long getEndTime() const;
@@ -128,7 +127,7 @@ public:
      * Sets the AnimationClip's repeat count. Overrides repeat duration.
      *
      * Use REPEAT_INDEFINITE to play the AnimationClip indefinitely.
-     * 
+     *
      * @param repeatCount The repeat count to set on the AnimationClip.
      */
     void setRepeatCount(float repeatCount);
@@ -151,7 +150,7 @@ public:
 
     /**
      * Gets the AnimationClip's active duration.
-     * 
+     *
      * @return the AnimationClip's active duration.
      */
     unsigned long getActiveDuration() const;
@@ -164,7 +163,7 @@ public:
     unsigned long getDuration() const;
 
     /**
-     * Set the AnimationClip's running speed. 
+     * Set the AnimationClip's running speed.
      *
      * @param speed The clips running speed.
      */
@@ -184,7 +183,7 @@ public:
      */
     void setBlendWeight(float blendWeight);
 
-    /** 
+    /**
      * Gets the blend weight of the AnimationClip.
      *
      * @return The blendweight of the AnimationClip.
@@ -200,7 +199,7 @@ public:
     void setLoopBlendTime(float loopBlendTime);
 
     /**
-     * Returns the amount of time (in milliseconds) spent blending the clip's 
+     * Returns the amount of time (in milliseconds) spent blending the clip's
      * end points when looping.
      *
      * @return Time spent blending end points of the clip when looping.
@@ -266,12 +265,12 @@ public:
     void removeEndListener(AnimationClip::Listener* listener);
 
     /**
-     * Adds an animation listener to be called back at the specified eventTime during the playback 
+     * Adds an animation listener to be called back at the specified eventTime during the playback
      * of the AnimationClip.
      *
-     * @param listener The listener to be called when the AnimationClip reaches the 
+     * @param listener The listener to be called when the AnimationClip reaches the
      *      specified time in its playback.
-     * @param eventTime The time the listener will be called during the playback of the AnimationClip. 
+     * @param eventTime The time the listener will be called during the playback of the AnimationClip.
      *      Must be between 0 and the duration of the AnimationClip.
      */
     void addListener(AnimationClip::Listener* listener, unsigned long eventTime);
@@ -285,7 +284,7 @@ public:
     void removeListener(AnimationClip::Listener* listener, unsigned long eventTime);
 
 private:
-    
+
     static const unsigned char CLIP_IS_PLAYING_BIT = 0x01;             // Bit representing whether AnimationClip is a running clip in AnimationController
     static const unsigned char CLIP_IS_STARTED_BIT = 0x02;             // Bit representing whether the AnimationClip has actually been started (ie: received first call to update())
     static const unsigned char CLIP_IS_FADING_OUT_STARTED_BIT = 0x04;  // Bit representing that a cross fade has started.
@@ -303,7 +302,7 @@ private:
      */
     struct ListenerEvent
     {
-        /** 
+        /**
          * Constructor.
          */
         ListenerEvent(Listener* listener, unsigned long eventTime);
@@ -379,9 +378,9 @@ private:
 
     /**
      * Clones the animation clip.
-     * 
+     *
      * @param animation The animation that the new clip belongs to.
-     * 
+     *
      * @return The newly created animation clip.
      */
     AnimationClip* clone(Animation* animation) const;

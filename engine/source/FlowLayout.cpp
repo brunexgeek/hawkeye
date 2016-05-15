@@ -3,7 +3,7 @@
 #include "FlowLayout.h"
 #include "Container.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 static FlowLayout* __instance;

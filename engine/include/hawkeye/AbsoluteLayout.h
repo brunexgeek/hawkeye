@@ -3,8 +3,7 @@
 
 #include "Layout.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 /**
  * Defines a Layout for forms and containers that requires the user
@@ -37,17 +36,17 @@ protected:
     void update(const Container* container);
 
 private:
-    
+
     /*
      * Constructor.
      */
     AbsoluteLayout();
-    
+
     /*
      * Constructor.
      */
     AbsoluteLayout(const AbsoluteLayout& copy);
-    
+
     /*
      * Destructor.
      */

@@ -3,7 +3,7 @@
 #include "Image.h"
 #include <png.h>
 
-namespace gameplay
+namespace hawkeye
 {
 // Callback for reading a png image using Stream
 static void readStream(png_structp png, png_bytep data, png_size_t length)

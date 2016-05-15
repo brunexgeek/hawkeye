@@ -7,7 +7,7 @@
 #include "Terrain.h"
 #include "Bundle.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 // Global list of active scenes

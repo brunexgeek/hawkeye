@@ -40,7 +40,7 @@ ParticlesSample::ParticlesSample()
 void ParticlesSample::addGrid(unsigned int lineCount)
 {
     float z = -1;
-    
+
     // There needs to be an odd number of lines
     lineCount |= 1;
     const unsigned int pointCount = lineCount * 4;
@@ -360,7 +360,7 @@ void ParticlesSample::saveFile()
 
     // Write out a properties file
     std::ostringstream s;
-    s << 
+    s <<
         "particle " << name << "\n" <<
         "{\n" <<
         "    sprite\n" <<
@@ -821,7 +821,7 @@ void ParticlesSample::update(float elapsedTime)
         _scene->getActiveCamera()->getNode()->translate(v);
     }
 
-    // Update particles. 
+    // Update particles.
     //TODO: Change this so update is called pre-render so this is not needed.
     ParticleEmitter* emitter = dynamic_cast<ParticleEmitter*>(_particleEmitterNode->getDrawable());
     if (emitter)
@@ -1068,7 +1068,7 @@ void ParticlesSample::emitterChanged()
     _startRed->setValue(emitter->getColorStart().x);
     _startGreen->setValue(emitter->getColorStart().y);
     _startBlue->setValue(emitter->getColorStart().z);
-    _startAlpha->setValue(emitter->getColorStart().w);    
+    _startAlpha->setValue(emitter->getColorStart().w);
 
     _endRed->setValue(emitter->getColorEnd().x);
     _endGreen->setValue(emitter->getColorEnd().y);
@@ -1091,7 +1091,7 @@ void ParticlesSample::emitterChanged()
     _posVarZ->setValue(posVar.z);
 
     const Vector3& vel = emitter->getVelocity();
-    _velX->setValue(vel.x);    
+    _velX->setValue(vel.x);
     _velY->setValue(vel.y);
     _velZ->setValue(vel.z);
 
@@ -1115,7 +1115,7 @@ void ParticlesSample::emitterChanged()
 
     const Vector3& axis = emitter->getRotationAxis();
     _axisX->setValue(axis.x);
-    _axisY->setValue(axis.y);    
+    _axisY->setValue(axis.y);
     _axisZ->setValue(axis.z);
 
 
@@ -1145,7 +1145,7 @@ void ParticlesSample::drawFrameRate(Font* font, const Vector4& color, unsigned i
 
 void ParticlesSample::resizeEvent(unsigned int width, unsigned int height)
 {
-    setViewport(gameplay::Rectangle(width, height));
+    setViewport(hawkeye::Rectangle(width, height));
     _form->setSize(width, height);
     _scene->getActiveCamera()->setAspectRatio((float)getWidth() / (float)getHeight());
 }

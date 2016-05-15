@@ -1,20 +1,21 @@
-#include "Base.h"
-#include "Game.h"
-#include "Platform.h"
-#include "RenderState.h"
-#include "FileSystem.h"
-#include "FrameBuffer.h"
-#include "SceneLoader.h"
-#include "ControlFactory.h"
-#include "Theme.h"
-#include "Form.h"
+#include <hawkeye/Base.h>
+#include <hawkeye/Game.h>
+#include <hawkeye/Platform.h>
+#include <hawkeye/RenderState.h>
+#include <hawkeye/FileSystem.h>
+#include <hawkeye/FrameBuffer.h>
+#include <hawkeye/SceneLoader.h>
+#include <hawkeye/ControlFactory.h>
+#include <hawkeye/Theme.h>
+#include <hawkeye/Form.h>
+#include "pal/OpenAudioController.hh"
 
 /** @script{ignore} */
-GLenum __gl_error_code = GL_NO_ERROR;
+uint32_t __gl_error_code = GL_NO_ERROR;
 /** @script{ignore} */
-ALenum __al_error_code = AL_NO_ERROR;
+uint32_t __al_error_code = AL_NO_ERROR;
 
-namespace gameplay
+namespace hawkeye
 {
 
 static Game* __gameInstance = NULL;
@@ -167,7 +168,7 @@ bool Game::startup()
     _animationController = new AnimationController();
     _animationController->initialize();
 
-    _audioController = new AudioController();
+    _audioController = new hawkeye::pal::OpenAudioController();
     _audioController->initialize();
 
     _physicsController = new PhysicsController();

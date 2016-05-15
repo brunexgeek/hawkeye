@@ -4,7 +4,7 @@
 #include "gameplay.h"
 #include "Sample.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
  * Sample creating and draw a single triangle.

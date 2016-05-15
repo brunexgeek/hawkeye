@@ -2,7 +2,7 @@
 #include "Button.h"
 #include "Gamepad.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 Button::Button() : _dataBinding(0)

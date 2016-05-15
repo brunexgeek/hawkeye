@@ -4,7 +4,7 @@
 #include "gameplay.h"
 #include "Sample.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 class TerrainSample : public Sample, public Control::Listener, private RenderState::AutoBindingResolver
 {

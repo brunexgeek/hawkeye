@@ -9,6 +9,7 @@ endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 file(GLOB HAWKEYE_SRC
     "source/*.cpp"
+    "source/pal/*.cc"
 )
 
 set(HAWKEYE_RES
@@ -46,7 +47,7 @@ set(HAWKEYE_RES_UI
 include_directories(
     "include/hawkeye"
     "include"
-    "../external-deps/include"
+	${HAWKEYE_DEPS_INCLUDES}
 )
 
 IF(CMAKE_SYSTEM_NAME MATCHES "Linux")

@@ -4,6 +4,7 @@ project(Hawkeye)
 
 set(HAWKEYE_VERSION 1.0.0)
 set(CMAKE_C_COMPILER_INIT g++)
+set(LIBRARY_OUTPUT_PATH "${CMAKE_CURRENT_BINARY_DIR}")
 
 # debug
 message( "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}" )
@@ -29,6 +30,7 @@ if (UNIX)
     set(CMAKE_CXX_FLAGS_DEBUG  "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 endif()
 
+add_subdirectory(3rd-party)
 add_subdirectory(engine)
 add_subdirectory(samples)
 

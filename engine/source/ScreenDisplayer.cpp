@@ -1,7 +1,7 @@
 #include "Base.h"
 #include "ScreenDisplayer.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 ScreenDisplayer* ScreenDisplayer::__scriptInstance = NULL;

@@ -6,7 +6,7 @@
 #include "Material.h"
 #include "Model.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
  * Sample for lights.
@@ -70,7 +70,7 @@ private:
 	Material* _bumpedSpecularMaterial;
 
 	Material* _lighting;
-	
+
 	RadioButton* _noLight;
 	RadioButton* _directional;
 	RadioButton* _spot;
@@ -85,7 +85,7 @@ private:
 	CheckBox* _addBumped;
 
 	Form* _form;
-    
+
 	bool _touched;
 	int _touchX, _touchY;
 };

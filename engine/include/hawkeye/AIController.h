@@ -4,8 +4,7 @@
 #include "AIAgent.h"
 #include "AIMessage.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 /**
  * Defines and facilitates the state machine execution and message passing

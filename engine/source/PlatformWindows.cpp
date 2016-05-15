@@ -485,7 +485,7 @@ LRESULT CALLBACK __WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 }
 
 
-namespace gameplay
+namespace hawkeye
 {
 
 struct WindowCreationParams

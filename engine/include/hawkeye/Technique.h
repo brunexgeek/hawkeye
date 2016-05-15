@@ -3,7 +3,7 @@
 
 #include "Pass.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 class Material;

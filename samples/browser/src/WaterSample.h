@@ -4,7 +4,7 @@
 #include "gameplay.h"
 #include "Sample.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
 * Sample creating a water effect.
@@ -16,7 +16,7 @@ public:
     WaterSample();
 
     void touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int contactIndex);
-    
+
     void keyEvent(Keyboard::KeyEvent evt, int key);
 
     bool mouseEvent(Mouse::MouseEvent evt, int x, int y, int wheelDelta);

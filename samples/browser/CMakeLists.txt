@@ -56,7 +56,17 @@ set(GAME_SRC
 )
 
 
-include_directories("../../engine/include/hawkeye")
+include_directories(
+	"../../engine/include/hawkeye"
+	"../../3rd-party/glew-1.10.0/include"
+    "../../3rd-party/bullet-2.82-r2704/src"
+    "../../3rd-party/vorbis-1.3.4/include"
+    "../../3rd-party/ogg-1.3.2/include"
+    "../../3rd-party/base64-1.0.0"
+    "../../3rd-party/libjson-7.6.1"
+    "../../3rd-party/png-1.6.15"
+	"../../3rd-party/zlib-1.2.8/"
+	"../../3rd-party/openal-1.16.0/include")
 
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")

@@ -4,7 +4,7 @@
 #include "gameplay.h"
 #include "Sample.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
  * Sample loading a physics scene from .scene file with .physics bindings
@@ -45,7 +45,7 @@ private:
 
     enum ObjectsTypes
     {
-        SPHERE = 0, 
+        SPHERE = 0,
         BOX = 1,
         CAPSULE = 2,
         DUCK = 3

@@ -4,7 +4,7 @@
 #include "Stream.h"
 #include <string>
 
-namespace gameplay
+namespace hawkeye
 {
 
 class Properties;

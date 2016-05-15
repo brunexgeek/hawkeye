@@ -22,7 +22,7 @@
 
 #define RS_ALL_ONES 0xFFFFFFFF
 
-namespace gameplay
+namespace hawkeye
 {
 
 RenderState::StateBlock* RenderState::StateBlock::_defaultState = NULL;

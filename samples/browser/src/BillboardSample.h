@@ -5,7 +5,7 @@
 #include "Sample.h"
 #include "FirstPersonCamera.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
  * Sample for 3D billboarding with cloud sprites
@@ -15,11 +15,11 @@ class BillboardSample: public Sample
 public:
 
     BillboardSample();
-    
+
     void touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int contactIndex);
-    
+
     void keyEvent(Keyboard::KeyEvent evt, int key);
-   
+
     bool mouseEvent(Mouse::MouseEvent evt, int x, int y, int wheelDelta);
 
     void gamepadEvent(Gamepad::GamepadEvent evt, Gamepad* gamepad);

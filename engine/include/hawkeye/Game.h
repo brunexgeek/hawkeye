@@ -16,7 +16,10 @@
 #include "TimeListener.h"
 #include "Platform.h"
 
-namespace gameplay
+
+//using namespace hawkeye;
+
+namespace hawkeye
 {
 
 class ScriptController;

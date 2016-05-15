@@ -2,7 +2,7 @@
 #include "MaterialParameter.h"
 #include "Node.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 MaterialParameter::MaterialParameter(const char* name) :

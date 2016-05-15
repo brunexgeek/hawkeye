@@ -2,7 +2,7 @@
 #include "AIController.h"
 #include "Game.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 AIController::AIController()

@@ -3,8 +3,7 @@
 
 #include "Animation.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 /**
  * Defines a running animation value which can have one or more floats.

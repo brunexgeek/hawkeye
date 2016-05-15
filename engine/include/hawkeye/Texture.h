@@ -5,7 +5,7 @@
 #include "Stream.h"
 #include <hawkeye/opengl.h>
 
-namespace gameplay
+namespace hawkeye
 {
 
 class Image;

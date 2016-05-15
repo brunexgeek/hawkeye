@@ -41,7 +41,8 @@
 
 /** Global variable to hold AL errors
  * @script{ignore} */
-extern ALenum __al_error_code;
+//extern ALenum __al_error_code;
+extern uint32_t __al_error_code;
 
 /**
  * Accesses the most recently set global AL error.

@@ -3,12 +3,12 @@
 
 #include "SamplesGame.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 class AudioSample : public Sample, Control::Listener
 {
 public:
-    
+
     AudioSample();
 
 protected:
@@ -24,7 +24,7 @@ protected:
     void controlEvent(Control* control, EventType evt);
 
 private:
-    
+
     Form* _formBackground;
     Form* _formEngine;
     Form* _formBraking;

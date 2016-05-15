@@ -7,7 +7,7 @@
 #include "JoystickControl.h"
 #include <limits.h>
 
-namespace gameplay
+namespace hawkeye
 {
 
 static std::vector<Gamepad*> __gamepads;

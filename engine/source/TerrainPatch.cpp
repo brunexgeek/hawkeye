@@ -6,7 +6,7 @@
 #include "Game.h"
 #include <limits.h>
 
-namespace gameplay
+namespace hawkeye
 {
 
 /**

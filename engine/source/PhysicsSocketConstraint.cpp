@@ -2,7 +2,7 @@
 #include "PhysicsSocketConstraint.h"
 #include "Node.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 PhysicsSocketConstraint::PhysicsSocketConstraint(PhysicsRigidBody* a, PhysicsRigidBody* b)

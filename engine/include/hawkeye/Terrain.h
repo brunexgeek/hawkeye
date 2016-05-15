@@ -10,7 +10,7 @@
 #include "BoundingBox.h"
 #include "TerrainPatch.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 class TerrainPatch;

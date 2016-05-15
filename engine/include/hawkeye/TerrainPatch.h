@@ -4,7 +4,7 @@
 #include "Model.h"
 #include "Camera.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 class Terrain;

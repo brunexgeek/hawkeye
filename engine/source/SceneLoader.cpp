@@ -11,7 +11,7 @@
 #include "Light.h"
 #include "FileSystem.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 // Utility functions (shared with Properties).

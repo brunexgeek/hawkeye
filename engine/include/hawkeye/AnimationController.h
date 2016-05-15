@@ -6,8 +6,7 @@
 #include "AnimationTarget.h"
 #include "Properties.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 /**
  * Defines a class for controlling game animation.
@@ -21,11 +20,11 @@ class AnimationController
 
 public:
 
-    /** 
+    /**
      * Stops all AnimationClips currently playing on the AnimationController.
      */
     void stopAllAnimations();
-       
+
 private:
 
     /**
@@ -75,7 +74,7 @@ private:
      * Resumes the AnimationController.
      */
     void resume();
-    
+
     /**
      * Pauses the AnimationController.
      */
@@ -90,12 +89,12 @@ private:
      * Unschedules an AnimationClip.
      */
     void unschedule(AnimationClip* clip);
-    
+
     /**
      * Callback for when the controller receives a frame update event.
      */
     void update(float elapsedTime);
-    
+
     State _state;                                 // The current state of the AnimationController.
     std::list<AnimationClip*> _runningClips;      // A list of running AnimationClips.
 };

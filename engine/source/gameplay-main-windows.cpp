@@ -3,7 +3,7 @@
 
 #include "gameplay.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 #ifndef _WINDOWS_
     #define WIN32_LEAN_AND_MEAN

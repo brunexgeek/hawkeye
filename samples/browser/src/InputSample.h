@@ -4,7 +4,7 @@
 #include "gameplay.h"
 #include "Sample.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
  * Samples basic input for keyboard, mouse, touch and accelerometer.
@@ -20,7 +20,7 @@ public:
     void keyEvent(Keyboard::KeyEvent evt, int key);
 
     bool mouseEvent(Mouse::MouseEvent evt, int x, int y, int wheelDelta);
-    
+
     void controlEvent(Control* control, EventType evt);
 
 protected:
@@ -36,11 +36,11 @@ protected:
 private:
 
     bool drawScene(Node* node);
-    
+
     void setCaptured(bool captured);
 
 private:
-    
+
     class TouchPoint
     {
     public:

@@ -5,8 +5,7 @@
 #include "AIStateMachine.h"
 #include "AIMessage.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 class Node;
 
@@ -15,7 +14,7 @@ class Node;
  *
  * Agents represent a unit of intelligence in a game and can be used
  * to program logic for a character or object in a game, using constructs
- * such as state machines. By default, an AIAgent has an empty state 
+ * such as state machines. By default, an AIAgent has an empty state
  * machine.
  */
 class AIAgent : public Ref
@@ -141,7 +140,7 @@ private:
      * Hidden copy assignment operator.
      */
     AIAgent& operator=(const AIAgent&);
-    
+
     /**
      * Set the node this agent is attached to.
      */

@@ -5,8 +5,7 @@
 #include "Properties.h"
 #include "Curve.h"
 
-namespace gameplay
-{
+namespace hawkeye {
 
 class AnimationTarget;
 class AnimationController;

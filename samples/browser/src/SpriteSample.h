@@ -4,7 +4,7 @@
 #include "gameplay.h"
 #include "Sample.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 /**
  * Sample drawing sprites in a scene with the Sprite class.
@@ -12,7 +12,7 @@ using namespace gameplay;
 class SpriteSample : public Sample
 {
 public:
-    
+
     enum Movement
     {
         WALK_FORWARD    = (1 << 0),
@@ -22,7 +22,7 @@ public:
     SpriteSample();
 
     void keyEvent(Keyboard::KeyEvent evt, int key);
-    
+
     void touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int contactIndex);
 
 protected:
@@ -36,9 +36,9 @@ protected:
     void render(float elapsedTime);
 
 private:
-    
+
     bool drawScene(Node* node);
-    
+
     float getTime() const;
 
     Font* _font;
@@ -48,7 +48,7 @@ private:
     Node* _playerNode;
     Animation* _playerAnimation;
     int _playerMovement;
-    
+
 };
 
 #endif

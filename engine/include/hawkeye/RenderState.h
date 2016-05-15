@@ -6,7 +6,7 @@
 #include "Vector4.h"
 #include <hawkeye/opengl.h>
 
-namespace gameplay
+namespace hawkeye
 {
 
 class MaterialParameter;

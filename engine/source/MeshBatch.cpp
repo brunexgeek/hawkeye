@@ -3,7 +3,7 @@
 #include "Material.h"
 #include <limits.h>
 
-namespace gameplay
+namespace hawkeye
 {
 
 MeshBatch::MeshBatch(const VertexFormat& vertexFormat, Mesh::PrimitiveType primitiveType, Material* material, bool indexed, unsigned int initialCapacity, unsigned int growSize)

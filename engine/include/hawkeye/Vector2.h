@@ -1,8 +1,7 @@
 #ifndef VECTOR2_H_
 #define VECTOR2_H_
 
-namespace gameplay
-{
+namespace hawkeye {
 
 class Matrix;
 

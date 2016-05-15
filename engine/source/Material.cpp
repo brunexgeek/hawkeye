@@ -8,7 +8,7 @@
 #include "Node.h"
 
 
-namespace gameplay
+namespace hawkeye
 {
 
 Material::Material() :

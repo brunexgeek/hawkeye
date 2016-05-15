@@ -8,7 +8,7 @@
 #include "BoundingSphere.h"
 #include <hawkeye/opengl.h>
 
-namespace gameplay
+namespace hawkeye
 {
 
 class MeshPart;

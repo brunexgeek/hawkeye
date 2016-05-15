@@ -3,7 +3,7 @@
 
 #include "Theme.h"
 
-namespace gameplay 
+namespace hawkeye 
 {	
 
 class Properties;

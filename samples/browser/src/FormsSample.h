@@ -3,12 +3,12 @@
 
 #include "SamplesGame.h"
 
-using namespace gameplay;
+using namespace hawkeye;
 
 class FormsSample : public Sample, Control::Listener
 {
 public:
-    
+
     FormsSample();
 
     void gamepadEvent(Gamepad::GamepadEvent evt, Gamepad* gamepad);
@@ -28,11 +28,11 @@ protected:
     void controlEvent(Control* control, EventType evt);
 
 private:
-    
+
     void formChanged();
-    
+
     void createSampleForm();
-    
+
     Scene* _scene;
     Node* _formNode;
     Node* _formNodeParent;

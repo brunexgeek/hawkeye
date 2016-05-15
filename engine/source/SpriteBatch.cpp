@@ -20,7 +20,7 @@
 #define SPRITE_VSH "res/shaders/sprite.vert"
 #define SPRITE_FSH "res/shaders/sprite.frag"
 
-namespace gameplay
+namespace hawkeye
 {
 
 static Effect* __spriteEffect = NULL;

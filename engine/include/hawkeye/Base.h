@@ -56,7 +56,7 @@ using std::atoi;
 #define NULL     0
 #endif
 
-namespace gameplay
+namespace hawkeye
 {
 /**
  * Print logging (implemented per platform).
@@ -94,9 +94,9 @@ extern int strcmpnocase(const char* s1, const char* s2);
 #else
 #define GP_ERROR(...) do \
     { \
-        gameplay::Logger::log(gameplay::Logger::LEVEL_ERROR, "%s -- ", __current__func__); \
-        gameplay::Logger::log(gameplay::Logger::LEVEL_ERROR, __VA_ARGS__); \
-        gameplay::Logger::log(gameplay::Logger::LEVEL_ERROR, "\n"); \
+        hawkeye::Logger::log(hawkeye::Logger::LEVEL_ERROR, "%s -- ", __current__func__); \
+        hawkeye::Logger::log(hawkeye::Logger::LEVEL_ERROR, __VA_ARGS__); \
+        hawkeye::Logger::log(hawkeye::Logger::LEVEL_ERROR, "\n"); \
         DEBUG_BREAK(); \
         assert(0); \
         std::exit(-1); \
@@ -106,9 +106,9 @@ extern int strcmpnocase(const char* s1, const char* s2);
 // Warning macro.
 #define GP_WARN(...) do \
     { \
-        gameplay::Logger::log(gameplay::Logger::LEVEL_WARN, "%s -- ", __current__func__); \
-        gameplay::Logger::log(gameplay::Logger::LEVEL_WARN, __VA_ARGS__); \
-        gameplay::Logger::log(gameplay::Logger::LEVEL_WARN, "\n"); \
+        hawkeye::Logger::log(hawkeye::Logger::LEVEL_WARN, "%s -- ", __current__func__); \
+        hawkeye::Logger::log(hawkeye::Logger::LEVEL_WARN, __VA_ARGS__); \
+        hawkeye::Logger::log(hawkeye::Logger::LEVEL_WARN, "\n"); \
     } while (0)
 
 #if defined(WIN32)
@@ -188,7 +188,7 @@ extern int strcmpnocase(const char* s1, const char* s2);
 #define WINDOW_VSYNC        1
 
 // Hardware buffer
-namespace gameplay
+namespace hawkeye
 {
 /** Gamepad handle */
 #ifdef __ANDROID__

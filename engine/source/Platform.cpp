@@ -5,7 +5,7 @@
 #include "ScriptController.h"
 #include "Form.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 void Platform::touchEventInternal(Touch::TouchEvent evt, int x, int y, unsigned int contactIndex, bool actuallyMouse)

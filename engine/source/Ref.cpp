@@ -2,7 +2,7 @@
 #include "Ref.h"
 #include "Game.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 #ifdef GP_USE_MEM_LEAK_DETECTION

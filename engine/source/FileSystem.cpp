@@ -27,7 +27,7 @@
 extern AAssetManager* __assetManager;
 #endif
 
-namespace gameplay
+namespace hawkeye
 {
 
 #ifdef __ANDROID__

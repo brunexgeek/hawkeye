@@ -12,8 +12,8 @@
 #include "ScriptTarget.h"
 #include "Gamepad.h"
 
-namespace gameplay
-{
+namespace hawkeye {
+
 
 class Container;
 class Form;
@@ -75,7 +75,7 @@ public:
         ALIGN_LEFT = 0x01,
         ALIGN_HCENTER = 0x02,
         ALIGN_RIGHT = 0x04,
-    
+
         // Specify vertical alignment, use default horizontal alignment (ALIGN_LEFT).
         ALIGN_TOP = 0x10,
         ALIGN_VCENTER = 0x20,
@@ -192,7 +192,7 @@ public:
 
         /**
          * Method called by controls when an event is triggered.
-         * 
+         *
          * @param control The control triggering the event.
          * @param evt The event triggered.
          */
@@ -420,7 +420,7 @@ public:
      * Get the absolute bounds of this control, in pixels, including border and padding,
      * before clipping.
      *
-     * The absolute bounds of a control represents its final computed bounds after all 
+     * The absolute bounds of a control represents its final computed bounds after all
      * alignment, auto sizing, relative position and sizing has been computed. The
      * returned bounds is in absolute coordinates, relative to the control's top-most
      * parent container (usually its form).
@@ -484,7 +484,7 @@ public:
     void setBorder(float top, float bottom, float left, float right, unsigned char states = STATE_ALL);
 
     /**
-     * Get the measurements of this control's border for a given state. 
+     * Get the measurements of this control's border for a given state.
      *
      * @return This control's border.
      */
@@ -645,7 +645,7 @@ public:
      * @return The blend color of this control's cursor.
      */
     const Vector4& getCursorColor(State state);
-    
+
     /**
      * Get the texture coordinates of this control's cursor for a given state.
      *
@@ -778,7 +778,7 @@ public:
     void setOpacity(float opacity, unsigned char states = STATE_ALL);
 
     /**
-     * Get the opacity of this control for a given state. 
+     * Get the opacity of this control for a given state.
      *
      * @param state The state to get this property from.
      *
@@ -787,7 +787,7 @@ public:
     float getOpacity(State state = NORMAL) const;
 
 	/**
-	 * Enables/Disables a control. 
+	 * Enables/Disables a control.
 	 *
 	 * @param enabled true if the control is enabled; false if disabled.
 	 */
@@ -931,7 +931,7 @@ public:
     Control* getParent() const;
 
     /**
-     * Determines if this control is a child (at any level of hierarchy) of the 
+     * Determines if this control is a child (at any level of hierarchy) of the
      * specified control.
      *
      * @param control The control to check.
@@ -960,7 +960,7 @@ public:
 
     /**
      * Removes a listener from this control.
-     * 
+     *
      * @param listener The listener to remove.
      */
     virtual void removeListener(Control::Listener* listener);
@@ -1112,7 +1112,7 @@ protected:
      *            If evt is KEY_CHAR then key is the unicode value of the character.
      *
      * @return Whether the key event was consumed by this control.
-     * 
+     *
      * @see Keyboard::KeyEvent
      * @see Keyboard::Key
      */
@@ -1143,7 +1143,7 @@ protected:
      * Gamepad callback on gamepad trigger changes.
      *
      * @param gamepad The gamepad whose one or more buttons have changed.
-     * @param index The index of the trigger that changed. 
+     * @param index The index of the trigger that changed.
      */
     virtual bool gamepadTriggerEvent(Gamepad* gamepad, unsigned int index);
 
@@ -1360,9 +1360,9 @@ protected:
      */
     static bool parseCoordPair(const char* s, float* v1, float* v2, bool* v1Percentage, bool* v2Percentage);
 
-    /** 
+    /**
      * The Control's ID.
-     */ 
+     */
     std::string _id;
 
     /**
@@ -1414,22 +1414,22 @@ protected:
      * Flag for whether the Control consumes input events.
      */
     bool _consumeInputEvents;
-    
+
     /**
      * The Control's Alignment
      */
     Alignment _alignment;
-    
+
     /**
      * The Control's auto size mode.
      */
     AutoSize _autoSize;
-    
+
     /**
      * Listeners map of EventType's to a list of Listeners.
      */
     std::map<Control::Listener::EventType, std::list<Control::Listener*>*>* _listeners;
-    
+
     /**
      * The Control's Theme::Style.
      */
@@ -1444,7 +1444,7 @@ protected:
      * The current opacity of the control.
      */
     float _opacity;
-    
+
     /**
      * The z-order of the control.
      */
@@ -1479,7 +1479,7 @@ private:
 
     /*
      * Constructor.
-     */    
+     */
     Control(const Control& copy);
 
     bool updateBoundsInternal(const Vector2& offset);

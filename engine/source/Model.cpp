@@ -6,7 +6,7 @@
 #include "Pass.h"
 #include "Node.h"
 
-namespace gameplay
+namespace hawkeye
 {
 
 Model::Model() : Drawable(),

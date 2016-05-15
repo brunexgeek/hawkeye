@@ -1,7 +1,7 @@
 #include "Base.h"
 #include "RadioButton.h"
 
-namespace gameplay
+namespace hawkeye
 {
 static std::vector<RadioButton*> __radioButtons;
 
