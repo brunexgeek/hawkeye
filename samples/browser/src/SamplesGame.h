@@ -35,6 +35,8 @@ public:
      */
     SamplesGame();
 
+	void drawSplash(void* param);
+
     void resizeEvent(unsigned int width, unsigned int height);
 
 	void keyEvent(Keyboard::KeyEvent evt, int key);

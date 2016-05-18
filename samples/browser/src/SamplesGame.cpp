@@ -14,8 +14,24 @@ SamplesGame::SamplesGame()
 {
 }
 
+void SamplesGame::drawSplash(void* param)
+{
+    clear(CLEAR_COLOR_DEPTH, Vector4(0, 0, 0, 1), 1.0f, 0);
+
+	setMultiSampling(true);
+    SpriteBatch* batch = SpriteBatch::create("res/logo_powered_white.png");
+    batch->start();
+    batch->draw(this->getWidth() * 0.5f, this->getHeight() * 0.5f, 0.0f, 991.0F * 0.5f, 724.0F * 0.5f, 0.0f, 1.0f, 1.0f, 0.0f, Vector4::one(), true);
+    batch->finish();
+    SAFE_DELETE(batch);
+}
+
+
 void SamplesGame::initialize()
 {
+    // Display the gameplay splash screen during loading, for at least 1 second.
+    displayScreen(this, &SamplesGame::drawSplash, NULL, 2000L);
+
     _font = Font::create("res/ui/arial.gpb");
 
     for (size_t i = 0; i < _categories->size(); ++i)
@@ -104,7 +120,7 @@ void SamplesGame::render(float elapsedTime)
     if (_activeSample)
     {
         _activeSample->render(elapsedTime);
-        
+
         // Draw back arrow
         _font->start();
         _font->drawText("<<", getWidth() - 40, 20, Vector4::one(), 28);
@@ -190,7 +206,7 @@ void SamplesGame::gesturePinchEvent(int x, int y, float scale)
     if (_activeSample)
         _activeSample->gesturePinchEvent(x, y, scale);
 }
-    
+
 void SamplesGame::gestureTapEvent(int x, int y)
 {
     if (_activeSample)
@@ -244,7 +260,7 @@ void SamplesGame::gamepadEvent(Gamepad::GamepadEvent evt, Gamepad* gamepad, unsi
 void SamplesGame::runSample(void* func)
 {
     exitActiveSample();
-    
+
     SampleGameCreatePtr p = (SampleGameCreatePtr)func;
 
     _activeSample = reinterpret_cast<Sample*>(p());
@@ -290,7 +306,7 @@ void SamplesGame::addSample(const char* category, const char* title, void* func,
 
     string categoryString(category);
     string titleString(title);
-    
+
     int index = -1;
     const int size = (int)_categories->size();
     for (int i = 0; i < size; ++i)
