@@ -2,9 +2,9 @@
 #define HAWKEYE_PAL_AUDIOCONTROLLER_HH
 
 
-#include <hawkeye/AudioController.h>
-#include <hawkeye/AudioSource.h>
-#include <hawkeye/openal.h>
+#include <hawkeye/AudioController.hh>
+#include <hawkeye/AudioSource.hh>
+#include <hawkeye/openal.hh>
 #include "OpenAudioSource.hh"
 
 namespace hawkeye {

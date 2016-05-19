@@ -1,7 +1,7 @@
 #ifndef GP_NO_PLATFORM
 #ifdef WIN32
 
-#include "gameplay.h"
+#include <hawkeye/gameplay.hh>
 
 using namespace hawkeye;
 

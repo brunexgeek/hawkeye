@@ -1,4 +1,4 @@
-#include "Grid.h"
+#include "Grid.hh"
 
 Mesh* createGridMesh(unsigned int lineCount)
 {

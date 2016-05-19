@@ -1,4 +1,4 @@
-#include "AudioSample.h"
+#include "AudioSample.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Media", "Audio Player", AudioSample, 2);
@@ -18,7 +18,7 @@ void AudioSample::initialize()
     for (int i = 0; i < sizeof(buttons) / sizeof(uintptr_t); i++) {
         Button* button = static_cast<Button*>(_formBackground->getControl(buttons[i]));
         button->addListener(this, Control::Listener::RELEASE);
-    }   
+    }
 
     // Create the audio source here, and feed the values into the UI controls.
     _audioBackground = AudioSource::create("res/common/audio/sample.audio#backgroundTrack");
@@ -65,17 +65,17 @@ void AudioSample::initialize()
     slider = static_cast<Slider*>(_formEngine->getControl("pitchEngineSlider"));
     slider->setValue(_audioEngine->getPitch());
     slider->addListener(this, Control::Listener::VALUE_CHANGED);
-    
+
     _audioBraking = AudioSource::create("res/common/audio/sample.audio#braking");
-    
+
     checkBox = static_cast<CheckBox*>(_formBraking->getControl("loopBrakingCheckBox"));
     checkBox->setChecked(_audioBraking->isLooped());
     checkBox->addListener(this, Control::Listener::VALUE_CHANGED);
-    
+
     slider = static_cast<Slider*>(_formBraking->getControl("gainBrakingSlider"));
     slider->setValue(_audioBraking->getGain());
     slider->addListener(this, Control::Listener::VALUE_CHANGED);
-    
+
     slider = static_cast<Slider*>(_formBraking->getControl("pitchBrakingSlider"));
     slider->setValue(_audioBraking->getPitch());
     slider->addListener(this, Control::Listener::VALUE_CHANGED);
@@ -86,7 +86,7 @@ void AudioSample::finalize()
     SAFE_RELEASE(_audioBraking);
     SAFE_RELEASE(_audioEngine);
     SAFE_RELEASE(_audioBackground);
-    
+
     SAFE_RELEASE(_formBraking);
     SAFE_RELEASE(_formEngine);
     SAFE_RELEASE(_formBackground);

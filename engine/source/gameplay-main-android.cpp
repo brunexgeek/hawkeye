@@ -2,7 +2,7 @@
 #ifdef __ANDROID__
 
 #include <android_native_app_glue.h>
-#include "gameplay.h"
+#include <hawkeye/gameplay.hh>
 
 using namespace hawkeye;
 

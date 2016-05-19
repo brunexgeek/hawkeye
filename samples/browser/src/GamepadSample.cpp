@@ -1,4 +1,4 @@
-#include "GamepadSample.h"
+#include "GamepadSample.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Input", "Gamepads", GamepadSample, 3);

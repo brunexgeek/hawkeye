@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "AnimationController.h"
-#include "Game.h"
-#include "Curve.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/AnimationController.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Curve.hh>
 
 namespace hawkeye
 {

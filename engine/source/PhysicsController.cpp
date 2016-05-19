@@ -1,18 +1,18 @@
-#include "Base.h"
-#include "PhysicsController.h"
-#include "PhysicsRigidBody.h"
-#include "PhysicsCharacter.h"
-#include "Game.h"
-#include "MeshPart.h"
-#include "Bundle.h"
-#include "Terrain.h"
-#include "MeshBatch.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/PhysicsController.hh>
+#include <hawkeye/PhysicsRigidBody.hh>
+#include <hawkeye/PhysicsCharacter.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/MeshPart.hh>
+#include <hawkeye/Bundle.hh>
+#include <hawkeye/Terrain.hh>
+#include <hawkeye/MeshBatch.hh>
 
 #ifdef GP_USE_MEM_LEAK_DETECTION
 #undef new
 #endif
-#include "BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h"
-#include "BulletCollision/CollisionShapes/btShapeHull.h"
+#include <BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
+#include <BulletCollision/CollisionShapes/btShapeHull.h>
 #ifdef GP_USE_MEM_LEAK_DETECTION
 #define new DEBUG_NEW
 #endif

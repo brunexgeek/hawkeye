@@ -1,11 +1,11 @@
-#include "Base.h"
-#include "AudioListener.h"
-#include "Scene.h"
-#include "SceneLoader.h"
-#include "MeshSkin.h"
-#include "Joint.h"
-#include "Terrain.h"
-#include "Bundle.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/AudioListener.hh>
+#include <hawkeye/Scene.hh>
+#include <hawkeye/SceneLoader.hh>
+#include <hawkeye/MeshSkin.hh>
+#include <hawkeye/Joint.hh>
+#include <hawkeye/Terrain.hh>
+#include <hawkeye/Bundle.hh>
 
 namespace hawkeye
 {

@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "Quaternion.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Quaternion.hh>
 
 namespace hawkeye
 {

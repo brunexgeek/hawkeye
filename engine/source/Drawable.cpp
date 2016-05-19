@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "Drawable.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Drawable.hh>
+#include <hawkeye/Node.hh>
 
 
 namespace hawkeye

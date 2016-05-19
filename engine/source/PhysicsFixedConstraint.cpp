@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "PhysicsFixedConstraint.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/PhysicsFixedConstraint.hh>
 
 namespace hawkeye
 {

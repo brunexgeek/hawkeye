@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "AIMessage.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/AIMessage.hh>
 
 namespace hawkeye
 {

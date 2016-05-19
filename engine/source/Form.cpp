@@ -1,14 +1,14 @@
-#include "Base.h"
-#include "Form.h"
-#include "AbsoluteLayout.h"
-#include "FlowLayout.h"
-#include "VerticalLayout.h"
-#include "Game.h"
-#include "Theme.h"
-#include "Label.h"
-#include "Button.h"
-#include "CheckBox.h"
-#include "Scene.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Form.hh>
+#include <hawkeye/AbsoluteLayout.hh>
+#include <hawkeye/FlowLayout.hh>
+#include <hawkeye/VerticalLayout.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Theme.hh>
+#include <hawkeye/Label.hh>
+#include <hawkeye/Button.hh>
+#include <hawkeye/CheckBox.hh>
+#include <hawkeye/Scene.hh>
 
 // Scroll speed when using a joystick.
 static const float GAMEPAD_SCROLL_SPEED = 600.0f;

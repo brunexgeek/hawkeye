@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "AIAgent.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/AIAgent.hh>
+#include <hawkeye/Node.hh>
 
 namespace hawkeye
 {

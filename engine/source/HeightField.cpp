@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "HeightField.h"
-#include "Image.h"
-#include "FileSystem.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/HeightField.hh>
+#include <hawkeye/Image.hh>
+#include <hawkeye/FileSystem.hh>
 
 namespace hawkeye
 {

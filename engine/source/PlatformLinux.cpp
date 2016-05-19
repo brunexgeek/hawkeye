@@ -1,12 +1,12 @@
 #ifndef GP_NO_PLATFORM
 #ifdef __linux__
 
-#include <hawkeye/Base.h>
-#include <hawkeye/Platform.h>
-#include <hawkeye/FileSystem.h>
-#include <hawkeye/Game.h>
-#include <hawkeye/Form.h>
-#include <hawkeye/ScriptController.h>
+#include <hawkeye/Base.hh>
+#include <hawkeye/Platform.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Form.hh>
+#include <hawkeye/ScriptController.hh>
 
 #include <X11/X.h>
 #include <X11/Xlib.h>

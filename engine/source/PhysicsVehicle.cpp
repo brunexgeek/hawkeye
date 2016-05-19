@@ -1,9 +1,9 @@
-#include "Base.h"
-#include "Game.h"
-#include "MathUtil.h"
-#include "Node.h"
-#include "PhysicsVehicle.h"
-#include "PhysicsVehicleWheel.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/MathUtil.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/PhysicsVehicle.hh>
+#include <hawkeye/PhysicsVehicleWheel.hh>
 
 #define AIR_DENSITY (1.2f)
 #define KPH_TO_MPS (1.0f / 3.6f)

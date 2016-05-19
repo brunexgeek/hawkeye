@@ -1,5 +1,5 @@
-#include "MeshPrimitiveSample.h"
-#include "SamplesGame.h"
+#include "MeshPrimitiveSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Mesh Primitives", MeshPrimitiveSample, 2);
@@ -58,14 +58,14 @@ static Mesh* createTriangleStripMesh()
         // x, y, z, r, g, b
         vertices.push_back(x);
         vertices.push_back(y + MATH_RANDOM_MINUS1_1() * scale);
-        vertices.push_back(MATH_RANDOM_MINUS1_1() * scale * 2); 
-        vertices.push_back(MATH_RANDOM_0_1()); 
-        vertices.push_back(MATH_RANDOM_0_1()); 
-        vertices.push_back(MATH_RANDOM_0_1()); 
+        vertices.push_back(MATH_RANDOM_MINUS1_1() * scale * 2);
+        vertices.push_back(MATH_RANDOM_0_1());
+        vertices.push_back(MATH_RANDOM_0_1());
+        vertices.push_back(MATH_RANDOM_0_1());
         x += step;
         y *= -1.0f;
     }
-    
+
     VertexFormat::Element elements[] =
     {
         VertexFormat::Element(VertexFormat::POSITION, 3),
@@ -78,7 +78,7 @@ static Mesh* createTriangleStripMesh()
         return NULL;
     }
     mesh->setPrimitiveType(Mesh::TRIANGLE_STRIP);
-    // 
+    //
     mesh->setVertexData(&vertices[0], 0, vertexCount);
     return mesh;
 }
@@ -86,7 +86,7 @@ static Mesh* createTriangleStripMesh()
 static Mesh* createLineStripMesh()
 {
     float a = 0.1f;
-    float vertices[] = 
+    float vertices[] =
     {
         0,  0,  0,    1, 0, 0,
         a,  0, -a,    0, 1, 0,
@@ -114,7 +114,7 @@ static Mesh* createLineStripMesh()
 
 static Mesh* createLinesMesh()
 {
-    float scale = 0.2f; 
+    float scale = 0.2f;
     unsigned int vertexCount = 40;
 
     std::vector<float> vertices;
@@ -129,7 +129,7 @@ static Mesh* createLinesMesh()
         vertices.push_back(MATH_RANDOM_0_1());
         vertices.push_back(MATH_RANDOM_0_1());
     }
-    
+
     VertexFormat::Element elements[] =
     {
         VertexFormat::Element(VertexFormat::POSITION, 3),
@@ -142,7 +142,7 @@ static Mesh* createLinesMesh()
         return NULL;
     }
     mesh->setPrimitiveType(Mesh::LINES);
-    // 
+    //
     mesh->setVertexData(&vertices[0], 0, vertexCount);
     return mesh;
 }
@@ -172,7 +172,7 @@ void MeshPrimitiveSample::initialize()
     // This sample doesn't use lighting so the unlit shader is used.
     // This sample uses vertex color so VERTEX_COLOR is defined. Look at the shader source files to see the supported defines.
     _triangles->setMaterial("res/shaders/colored.vert", "res/shaders/colored.frag", "VERTEX_COLOR");
-    
+
     Mesh* triangleStripMesh = createTriangleStripMesh();
     _triangleStrip = Model::create(triangleStripMesh);
     SAFE_RELEASE(triangleStripMesh);
@@ -184,7 +184,7 @@ void MeshPrimitiveSample::initialize()
     _lineStrip = Model::create(lineStripMesh);
     SAFE_RELEASE(lineStripMesh);
     _lineStrip->setMaterial("res/shaders/colored.vert", "res/shaders/colored.frag", "VERTEX_COLOR");
-    
+
     Mesh* lineMesh = createLinesMesh();
     _lines = Model::create(lineMesh);
     SAFE_RELEASE(lineMesh);
@@ -223,7 +223,7 @@ void MeshPrimitiveSample::render(float elapsedTime)
 
     Matrix m;
     float offset = 0.5f;
-    
+
     // Bind the view projection matrix to the model's paramter. This will transform the vertices when the model is drawn.
     m.setIdentity();
     m.translate(-offset, offset, 0);

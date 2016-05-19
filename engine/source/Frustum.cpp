@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Frustum.h"
-#include "BoundingSphere.h"
-#include "BoundingBox.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Frustum.hh>
+#include <hawkeye/BoundingSphere.hh>
+#include <hawkeye/BoundingBox.hh>
 
 namespace hawkeye
 {

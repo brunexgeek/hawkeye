@@ -1,10 +1,10 @@
-#include "Base.h"
-#include "Gamepad.h"
-#include "Game.h"
-#include "Button.h"
-#include "Platform.h"
-#include "Form.h"
-#include "JoystickControl.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Gamepad.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Button.hh>
+#include <hawkeye/Platform.hh>
+#include <hawkeye/Form.hh>
+#include <hawkeye/JoystickControl.hh>
 #include <limits.h>
 
 namespace hawkeye

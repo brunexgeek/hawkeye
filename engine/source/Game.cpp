@@ -1,13 +1,13 @@
-#include <hawkeye/Base.h>
-#include <hawkeye/Game.h>
-#include <hawkeye/Platform.h>
-#include <hawkeye/RenderState.h>
-#include <hawkeye/FileSystem.h>
-#include <hawkeye/FrameBuffer.h>
-#include <hawkeye/SceneLoader.h>
-#include <hawkeye/ControlFactory.h>
-#include <hawkeye/Theme.h>
-#include <hawkeye/Form.h>
+#include <hawkeye/Base.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Platform.hh>
+#include <hawkeye/RenderState.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/FrameBuffer.hh>
+#include <hawkeye/SceneLoader.hh>
+#include <hawkeye/ControlFactory.hh>
+#include <hawkeye/Theme.hh>
+#include <hawkeye/Form.hh>
 #include "pal/OpenAudioController.hh"
 
 /** @script{ignore} */

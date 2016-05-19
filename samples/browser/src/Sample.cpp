@@ -1,5 +1,5 @@
-#include "Sample.h"
-#include "SamplesGame.h"
+#include "Sample.hh"
+#include "SamplesGame.hh"
 
 const Game::State& Sample::UNINITIALIZED = Game::UNINITIALIZED;
 const Game::State& Sample::RUNNING = Game::RUNNING;
@@ -138,7 +138,7 @@ void Sample::displayKeyboard(bool display)
 }
 
 void Sample::keyEvent(Keyboard::KeyEvent evt, int key)
-{    
+{
 }
 
 void Sample::touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int contactIndex)

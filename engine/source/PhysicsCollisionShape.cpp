@@ -1,11 +1,11 @@
-#include "Base.h"
-#include "PhysicsCollisionShape.h"
-#include "Node.h"
-#include "Image.h"
-#include "Properties.h"
-#include "FileSystem.h"
-#include "HeightField.h"
-#include "Terrain.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/PhysicsCollisionShape.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/Image.hh>
+#include <hawkeye/Properties.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/HeightField.hh>
+#include <hawkeye/Terrain.hh>
 
 namespace hawkeye
 {

@@ -1,14 +1,14 @@
-#include "Base.h"
-#include "PhysicsCollisionObject.h"
-#include "PhysicsController.h"
-#include "Game.h"
-#include "Node.h"
-#include "ScriptController.h"
-#include "PhysicsRigidBody.h"
-#include "PhysicsCharacter.h"
-#include "PhysicsGhostObject.h"
-#include "PhysicsVehicle.h"
-#include "PhysicsVehicleWheel.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/PhysicsCollisionObject.hh>
+#include <hawkeye/PhysicsController.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/ScriptController.hh>
+#include <hawkeye/PhysicsRigidBody.hh>
+#include <hawkeye/PhysicsCharacter.hh>
+#include <hawkeye/PhysicsGhostObject.hh>
+#include <hawkeye/PhysicsVehicle.hh>
+#include <hawkeye/PhysicsVehicleWheel.hh>
 
 namespace hawkeye
 {

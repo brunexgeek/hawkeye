@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "Ref.h"
-#include "Game.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Ref.hh>
+#include <hawkeye/Game.hh>
 
 namespace hawkeye
 {

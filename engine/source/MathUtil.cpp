@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "MathUtil.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/MathUtil.hh>
 
 namespace hawkeye
 {

@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "Label.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Label.hh>
 
 namespace hawkeye
 {

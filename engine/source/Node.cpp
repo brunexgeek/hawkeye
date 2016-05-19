@@ -1,18 +1,18 @@
-#include "Base.h"
-#include "Node.h"
-#include "AudioSource.h"
-#include "Scene.h"
-#include "Joint.h"
-#include "PhysicsRigidBody.h"
-#include "PhysicsVehicle.h"
-#include "PhysicsVehicleWheel.h"
-#include "PhysicsGhostObject.h"
-#include "PhysicsCharacter.h"
-#include "Terrain.h"
-#include "Game.h"
-#include "Drawable.h"
-#include "Form.h"
-#include "Ref.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/AudioSource.hh>
+#include <hawkeye/Scene.hh>
+#include <hawkeye/Joint.hh>
+#include <hawkeye/PhysicsRigidBody.hh>
+#include <hawkeye/PhysicsVehicle.hh>
+#include <hawkeye/PhysicsVehicleWheel.hh>
+#include <hawkeye/PhysicsGhostObject.hh>
+#include <hawkeye/PhysicsCharacter.hh>
+#include <hawkeye/Terrain.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Drawable.hh>
+#include <hawkeye/Form.hh>
+#include <hawkeye/Ref.hh>
 
 // Node dirty flags
 #define NODE_DIRTY_WORLD 1

@@ -1,11 +1,11 @@
 #ifndef HAWKEYE_PAL_AUDIOBUFFER_HH
 #define HAWKEYE_PAL_AUDIOBUFFER_HH
 
-#include <hawkeye/Ref.h>
-#include <hawkeye/Stream.h>
-#include <hawkeye/AudioBuffer.h>
+#include <hawkeye/Ref.hh>
+#include <hawkeye/Stream.hh>
+#include <hawkeye/AudioBuffer.hh>
 #include <vorbis/vorbisfile.h>
-#include <hawkeye/openal.h>
+#include <hawkeye/openal.hh>
 #include "OpenAudioBuffer.hh"
 
 namespace hawkeye {

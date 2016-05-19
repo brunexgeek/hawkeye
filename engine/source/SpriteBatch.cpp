@@ -1,8 +1,8 @@
-#include "Base.h"
-#include "SpriteBatch.h"
-#include "MeshBatch.h"
-#include "Game.h"
-#include "Material.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/SpriteBatch.hh>
+#include <hawkeye/MeshBatch.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Material.hh>
 
 // Default size of a newly created sprite batch
 #define SPRITE_BATCH_DEFAULT_SIZE 128

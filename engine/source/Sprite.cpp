@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "Sprite.h"
-#include "Scene.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Sprite.hh>
+#include <hawkeye/Scene.hh>
 
 namespace hawkeye
 {

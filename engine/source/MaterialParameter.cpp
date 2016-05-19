@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "MaterialParameter.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/MaterialParameter.hh>
+#include <hawkeye/Node.hh>
 
 namespace hawkeye
 {

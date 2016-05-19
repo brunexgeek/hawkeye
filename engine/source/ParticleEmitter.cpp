@@ -1,10 +1,10 @@
-#include "Base.h"
-#include "ParticleEmitter.h"
-#include "Game.h"
-#include "Node.h"
-#include "Scene.h"
-#include "Quaternion.h"
-#include "Properties.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/ParticleEmitter.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/Scene.hh>
+#include <hawkeye/Quaternion.hh>
+#include <hawkeye/Properties.hh>
 
 #define PARTICLE_COUNT_MAX                       100
 #define PARTICLE_EMISSION_RATE                   10

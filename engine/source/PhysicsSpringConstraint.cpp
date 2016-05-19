@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "PhysicsSpringConstraint.h"
-#include "Node.h"
-#include "PhysicsRigidBody.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/PhysicsSpringConstraint.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/PhysicsRigidBody.hh>
 
 namespace hawkeye
 {

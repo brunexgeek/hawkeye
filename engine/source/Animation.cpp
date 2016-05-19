@@ -1,11 +1,11 @@
-#include "Base.h"
-#include "Animation.h"
-#include "AnimationController.h"
-#include "AnimationClip.h"
-#include "AnimationTarget.h"
-#include "Game.h"
-#include "Transform.h"
-#include "Properties.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Animation.hh>
+#include <hawkeye/AnimationController.hh>
+#include <hawkeye/AnimationClip.hh>
+#include <hawkeye/AnimationTarget.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Transform.hh>
+#include <hawkeye/Properties.hh>
 
 #define ANIMATION_INDEFINITE_STR "INDEFINITE"
 #define ANIMATION_DEFAULT_CLIP 0

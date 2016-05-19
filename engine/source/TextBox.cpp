@@ -1,5 +1,5 @@
-#include "TextBox.h"
-#include "Game.h"
+#include <hawkeye/TextBox.hh>
+#include <hawkeye/Game.hh>
 
 namespace hawkeye
 {

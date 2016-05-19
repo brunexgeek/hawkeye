@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Image.h"
-#include "Texture.h"
-#include "FileSystem.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Image.hh>
+#include <hawkeye/Texture.hh>
+#include <hawkeye/FileSystem.hh>
 
 // PVRTC (GL_IMG_texture_compression_pvrtc) : Imagination based gpus
 #ifndef GL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG

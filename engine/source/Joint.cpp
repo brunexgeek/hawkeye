@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Joint.h"
-#include "MeshSkin.h"
-#include "Model.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Joint.hh>
+#include <hawkeye/MeshSkin.hh>
+#include <hawkeye/Model.hh>
 
 namespace hawkeye
 {

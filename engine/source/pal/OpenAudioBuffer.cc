@@ -1,5 +1,5 @@
-#include <hawkeye/Base.h>
-#include <hawkeye/FileSystem.h>
+#include <hawkeye/Base.hh>
+#include <hawkeye/FileSystem.hh>
 #include "OpenAudioBuffer.hh"
 
 namespace hawkeye {

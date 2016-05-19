@@ -1,15 +1,15 @@
-#include "Base.h"
-#include "AudioSource.h"
-#include "Game.h"
-#include "Bundle.h"
-#include "SceneLoader.h"
-#include "Terrain.h"
-#include "ParticleEmitter.h"
-#include "Sprite.h"
-#include "Text.h"
-#include "TileSet.h"
-#include "Light.h"
-#include "FileSystem.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/AudioSource.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Bundle.hh>
+#include <hawkeye/SceneLoader.hh>
+#include <hawkeye/Terrain.hh>
+#include <hawkeye/ParticleEmitter.hh>
+#include <hawkeye/Sprite.hh>
+#include <hawkeye/Text.hh>
+#include <hawkeye/TileSet.hh>
+#include <hawkeye/Light.hh>
+#include <hawkeye/FileSystem.hh>
 
 namespace hawkeye
 {

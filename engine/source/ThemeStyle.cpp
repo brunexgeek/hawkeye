@@ -1,4 +1,4 @@
-#include "ThemeStyle.h"
+#include <hawkeye/ThemeStyle.hh>
 
 namespace hawkeye
 {

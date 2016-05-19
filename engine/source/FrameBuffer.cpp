@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "FrameBuffer.h"
-#include "Game.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/FrameBuffer.hh>
+#include <hawkeye/Game.hh>
 
 #define FRAMEBUFFER_ID_DEFAULT "org.gameplay3d.framebuffer.default"
 

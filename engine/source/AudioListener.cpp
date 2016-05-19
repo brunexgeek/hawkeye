@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Node.h"
-#include "AudioListener.h"
-#include "Game.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/AudioListener.hh>
+#include <hawkeye/Game.hh>
 
 namespace hawkeye
 {

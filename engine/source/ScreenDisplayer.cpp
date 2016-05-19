@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "ScreenDisplayer.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/ScreenDisplayer.hh>
 
 namespace hawkeye
 {

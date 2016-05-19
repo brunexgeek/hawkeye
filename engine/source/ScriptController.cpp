@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "FileSystem.h"
-#include "ScriptController.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/ScriptController.hh>
 
 namespace hawkeye
 {

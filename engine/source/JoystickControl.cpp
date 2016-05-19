@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "JoystickControl.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/JoystickControl.hh>
 
 namespace hawkeye
 {

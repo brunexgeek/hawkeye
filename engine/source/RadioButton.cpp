@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "RadioButton.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/RadioButton.hh>
 
 namespace hawkeye
 {

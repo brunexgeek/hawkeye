@@ -1,9 +1,9 @@
-#include "Base.h"
-#include "Plane.h"
-#include "Frustum.h"
-#include "Ray.h"
-#include "BoundingSphere.h"
-#include "BoundingBox.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Plane.hh>
+#include <hawkeye/Frustum.hh>
+#include <hawkeye/Ray.hh>
+#include <hawkeye/BoundingSphere.hh>
+#include <hawkeye/BoundingBox.hh>
 
 namespace hawkeye
 {

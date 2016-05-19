@@ -1,5 +1,5 @@
-#include "WaterSample.h"
-#include "SamplesGame.h"
+#include "WaterSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
 ADD_SAMPLE("Graphics", "Water", WaterSample, 13);
@@ -16,8 +16,8 @@ static const float WATER_OFFSET = 0.55f;
 WaterSample::WaterSample()
     : _font(NULL), _scene(NULL), _cameraNode(NULL),
     _reflectCameraNode(NULL), _inputMask(0u), _prevX(0),
-     _prevY(0), _waterHeight(0.f), 
-     _refractBuffer(NULL), _refractBatch(NULL), _reflectBuffer(NULL), _reflectBatch(NULL), 
+     _prevY(0), _waterHeight(0.f),
+     _refractBuffer(NULL), _refractBatch(NULL), _reflectBuffer(NULL), _reflectBatch(NULL),
      _showBuffers(false), _gamepad(NULL)
 {
 }
@@ -122,7 +122,7 @@ void WaterSample::update(float elapsedTime)
     const float minVal = 0.1f;
     if (_gamepad && _gamepad->getJoystickCount())
         _gamepad->getJoystickValues(0, &axis);
-    
+
     // Move the camera by applying a force
     Vector3 force;
     if ((_inputMask & MOVE_FORWARD) || axis.y > minVal)
@@ -140,7 +140,7 @@ void WaterSample::update(float elapsedTime)
     if (_cameraAcceleration.lengthSquared() < 0.01f)
         _cameraAcceleration = Vector3::zero();
     _cameraNode->translate(_cameraAcceleration * SPEED * (elapsedTime / 1000.f));
-    
+
     // Make sure the reflection camera follows
     Vector3 position = _cameraNode->getTranslation();
     position.y = -position.y + _waterHeight * 2.f;
@@ -150,7 +150,7 @@ void WaterSample::update(float elapsedTime)
 void WaterSample::render(float elapsedTime)
 {
     const Vector4 clearColour(0.84f, 0.89f, 1.f, 1.f);
-    
+
     // Update the refract buffer
     FrameBuffer* defaultBuffer = _refractBuffer->bind();
     Rectangle defaultViewport = getViewport();
@@ -220,7 +220,7 @@ void WaterSample::touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int c
         int deltaY = y - _prevY;
         _prevX = x;
         _prevY = y;
-        
+
         float xMovement = MATH_DEG_TO_RAD(deltaX * 0.25f);
         float yMovement = MATH_DEG_TO_RAD(-deltaY * 0.25f);
         _cameraNode->rotateY(-xMovement);
@@ -331,7 +331,7 @@ bool WaterSample::drawScene(Node* node, bool drawWater)
 {
     std::string id = node->getId();
     if (!drawWater && id == "Water") return true;
-    
+
     Drawable* drawable = node->getDrawable();
     if (drawable)
         drawable->draw();

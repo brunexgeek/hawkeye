@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "Vector3.h"
-#include "MathUtil.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Vector3.hh>
+#include <hawkeye/MathUtil.hh>
 
 namespace hawkeye
 {

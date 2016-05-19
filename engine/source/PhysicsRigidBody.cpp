@@ -1,11 +1,11 @@
-#include "Base.h"
-#include "PhysicsRigidBody.h"
-#include "PhysicsController.h"
-#include "Game.h"
-#include "Image.h"
-#include "MeshPart.h"
-#include "Node.h"
-#include "Terrain.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/PhysicsRigidBody.hh>
+#include <hawkeye/PhysicsController.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Image.hh>
+#include <hawkeye/MeshPart.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/Terrain.hh>
 
 namespace hawkeye
 {

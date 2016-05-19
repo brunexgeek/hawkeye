@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "Rectangle.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Rectangle.hh>
 
 namespace hawkeye
 {

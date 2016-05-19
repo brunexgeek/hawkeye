@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "AnimationValue.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/AnimationValue.hh>
 
 namespace hawkeye
 {

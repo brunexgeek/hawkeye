@@ -1,8 +1,8 @@
-#include "Base.h"
-#include "Terrain.h"
-#include "TerrainPatch.h"
-#include "Node.h"
-#include "FileSystem.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Terrain.hh>
+#include <hawkeye/TerrainPatch.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/FileSystem.hh>
 
 namespace hawkeye
 {

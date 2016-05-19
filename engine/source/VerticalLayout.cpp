@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "VerticalLayout.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/VerticalLayout.hh>
 
 namespace hawkeye
 {

@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "PhysicsSocketConstraint.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/PhysicsSocketConstraint.hh>
+#include <hawkeye/Node.hh>
 
 namespace hawkeye
 {

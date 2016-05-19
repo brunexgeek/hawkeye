@@ -1,9 +1,9 @@
-#include "Base.h"
-#include "TerrainPatch.h"
-#include "Terrain.h"
-#include "MeshPart.h"
-#include "Scene.h"
-#include "Game.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/TerrainPatch.hh>
+#include <hawkeye/Terrain.hh>
+#include <hawkeye/MeshPart.hh>
+#include <hawkeye/Scene.hh>
+#include <hawkeye/Game.hh>
 #include <limits.h>
 
 namespace hawkeye

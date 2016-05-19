@@ -1,5 +1,5 @@
-#include "PhysicsCollisionObjectSample.h"
-#include "SamplesGame.h"
+#include "PhysicsCollisionObjectSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Physics", "Collision 3D", PhysicsCollisionObjectSample, 1);
@@ -206,7 +206,7 @@ void PhysicsCollisionObjectSample::controlEvent(Control* control, EventType evt)
     if (strcmp(button->getId(), "wireframeButton") == 0)
     {
         toggleWireframe();
-        
+
     }
     else if (strcmp(button->getId(), "drawDebugButton") == 0)
     {

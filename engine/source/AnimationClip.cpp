@@ -1,10 +1,10 @@
-#include "Base.h"
-#include "AnimationClip.h"
-#include "Animation.h"
-#include "AnimationTarget.h"
-#include "Game.h"
-#include "Quaternion.h"
-#include "ScriptController.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/AnimationClip.hh>
+#include <hawkeye/Animation.hh>
+#include <hawkeye/AnimationTarget.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Quaternion.hh>
+#include <hawkeye/ScriptController.hh>
 
 namespace hawkeye
 {

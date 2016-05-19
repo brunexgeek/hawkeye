@@ -1,7 +1,7 @@
-#include <hawkeye/Base.h>
-#include <hawkeye/AudioListener.h>
-#include <hawkeye/AudioBuffer.h>
-#include <hawkeye/AudioSource.h>
+#include <hawkeye/Base.hh>
+#include <hawkeye/AudioListener.hh>
+#include <hawkeye/AudioBuffer.hh>
+#include <hawkeye/AudioSource.hh>
 #include "OpenAudioController.hh"
 
 

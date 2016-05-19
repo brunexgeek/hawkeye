@@ -1,10 +1,10 @@
-#include "Base.h"
-#include "Node.h"
-#include "AudioBuffer.h"
-#include "AudioController.h"
-#include "AudioSource.h"
-#include "Game.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/AudioBuffer.hh>
+#include <hawkeye/AudioController.hh>
+#include <hawkeye/AudioSource.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Node.hh>
 #include "pal/OpenAudioSource.hh"
 
 namespace hawkeye {

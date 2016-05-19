@@ -1,6 +1,6 @@
-#include "Audio3DSample.h"
-#include "Grid.h"
-#include "SamplesGame.h"
+#include "Audio3DSample.hh"
+#include "Grid.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Media", "Audio 3D", Audio3DSample, 1);
@@ -158,7 +158,7 @@ void Audio3DSample::render(float elapsedTime)
 
 bool Audio3DSample::drawScene(Node* node)
 {
-    Drawable* drawable = node->getDrawable(); 
+    Drawable* drawable = node->getDrawable();
     if (drawable)
         drawable->draw();
     return true;
@@ -195,7 +195,7 @@ void Audio3DSample::touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int
         float yaw = MATH_DEG_TO_RAD(deltaX * 0.5f);
         _fpCamera.rotate(yaw, pitch);
         break;
-    }   
+    }
     };
 }
 
@@ -295,7 +295,7 @@ void Audio3DSample::addSound(const std::string& file)
         node->setId(file.c_str());
         node->setAudioSource(audioSource);
         audioSource->release();
-        
+
         _audioNodes[path] = node;
         node->addRef();
     }

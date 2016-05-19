@@ -1,5 +1,5 @@
-#include "InputSample.h"
-#include "SamplesGame.h"
+#include "InputSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Input", "Basic Input", InputSample, 1);
@@ -135,7 +135,7 @@ void InputSample::render(float elapsedTime)
     char buffer[50];
 
     _font->start();
-    
+
     if (isMouseCaptured())
     {
         // Draw crosshair at current offest w.r.t. center of screen
@@ -180,7 +180,7 @@ void InputSample::render(float elapsedTime)
     {
         _font->drawText(_keyboardString.c_str(), 0, 0, fontColor, fontSize);
     }
-    
+
     // Printable symbols typed
     if (_symbolsString.length() > 0)
     {
@@ -227,7 +227,7 @@ void InputSample::render(float elapsedTime)
 
 bool InputSample::drawScene(Node* node)
 {
-    Drawable* drawable = node->getDrawable(); 
+    Drawable* drawable = node->getDrawable();
     if (drawable)
         drawable->draw();
     return true;

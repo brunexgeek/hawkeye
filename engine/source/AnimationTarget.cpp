@@ -1,9 +1,9 @@
-#include "Base.h"
-#include "AnimationTarget.h"
-#include "Animation.h"
-#include "Game.h"
-#include "Node.h"
-#include "MaterialParameter.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/AnimationTarget.hh>
+#include <hawkeye/Animation.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/MaterialParameter.hh>
 
 #define ANIMATION_TARGET_INDEFINITE_STR "INDEFINITE"
 

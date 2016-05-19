@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "RenderTarget.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/RenderTarget.hh>
 
 namespace hawkeye
 {

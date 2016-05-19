@@ -1,5 +1,5 @@
-#include "TerrainSample.h"
-#include "SamplesGame.h"
+#include "TerrainSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Terrain", TerrainSample, 12);

@@ -1,9 +1,9 @@
-#include "Base.h"
-#include "Bundle.h"
-#include "FileSystem.h"
-#include "MeshPart.h"
-#include "Scene.h"
-#include "Joint.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Bundle.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/MeshPart.hh>
+#include <hawkeye/Scene.hh>
+#include <hawkeye/Joint.hh>
 
 // Minimum version numbers supported
 #define BUNDLE_VERSION_MAJOR_REQUIRED   1 

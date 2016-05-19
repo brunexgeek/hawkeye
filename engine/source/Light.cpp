@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "Light.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Light.hh>
+#include <hawkeye/Node.hh>
 
 namespace hawkeye
 {

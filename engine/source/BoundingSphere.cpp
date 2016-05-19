@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "BoundingSphere.h"
-#include "BoundingBox.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/BoundingSphere.hh>
+#include <hawkeye/BoundingBox.hh>
 
 namespace hawkeye
 {

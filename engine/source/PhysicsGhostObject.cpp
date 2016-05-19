@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "PhysicsGhostObject.h"
-#include "Node.h"
-#include "Game.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/PhysicsGhostObject.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/Game.hh>
 
 namespace hawkeye
 {

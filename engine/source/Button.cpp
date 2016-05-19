@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "Button.h"
-#include "Gamepad.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Button.hh>
+#include <hawkeye/Gamepad.hh>
 
 namespace hawkeye
 {

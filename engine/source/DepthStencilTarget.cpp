@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "DepthStencilTarget.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/DepthStencilTarget.hh>
 
 #ifndef GL_DEPTH24_STENCIL8_OES
 #define GL_DEPTH24_STENCIL8_OES 0x88F0

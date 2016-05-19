@@ -1,5 +1,5 @@
-#include "SpriteSample.h"
-#include "SamplesGame.h"
+#include "SpriteSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Sprite", SpriteSample, 6);
@@ -126,10 +126,10 @@ void SpriteSample::render(float elapsedTime)
 {
     // Clear the color and depth buffers
     clear(CLEAR_COLOR_DEPTH, Vector4::zero(), 1.0f, 0);
-    
+
     // Visit all the nodes in the scene, drawing the sprites
     _scene->visit(this, &SpriteSample::drawScene);
-    
+
     drawFrameRate(_font, Vector4(0, 0.5f, 1, 1), 5, 1, getFrameRate());
 }
 
@@ -190,7 +190,7 @@ bool SpriteSample::drawScene(Node* node)
     Drawable* drawable = node->getDrawable();
     if (drawable)
         drawable->draw();
-    
+
     return true;
 }
 

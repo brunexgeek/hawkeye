@@ -1,20 +1,20 @@
-#include "Base.h"
-#include "Container.h"
-#include "Layout.h"
-#include "AbsoluteLayout.h"
-#include "FlowLayout.h"
-#include "VerticalLayout.h"
-#include "Label.h"
-#include "Button.h"
-#include "CheckBox.h"
-#include "RadioButton.h"
-#include "Slider.h"
-#include "TextBox.h"
-#include "JoystickControl.h"
-#include "ImageControl.h"
-#include "Form.h"
-#include "Game.h"
-#include "ControlFactory.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Container.hh>
+#include <hawkeye/Layout.hh>
+#include <hawkeye/AbsoluteLayout.hh>
+#include <hawkeye/FlowLayout.hh>
+#include <hawkeye/VerticalLayout.hh>
+#include <hawkeye/Label.hh>
+#include <hawkeye/Button.hh>
+#include <hawkeye/CheckBox.hh>
+#include <hawkeye/RadioButton.hh>
+#include <hawkeye/Slider.hh>
+#include <hawkeye/TextBox.hh>
+#include <hawkeye/JoystickControl.hh>
+#include <hawkeye/ImageControl.hh>
+#include <hawkeye/Form.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/ControlFactory.hh>
 #include <limits.h>
 
 

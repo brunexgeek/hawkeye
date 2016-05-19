@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "FileSystem.h"
-#include "Image.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/Image.hh>
 #include <png.h>
 
 namespace hawkeye

@@ -1,8 +1,8 @@
-#include "Base.h"
-#include "AIState.h"
-#include "AIAgent.h"
-#include "AIStateMachine.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/AIState.hh>
+#include <hawkeye/AIAgent.hh>
+#include <hawkeye/AIStateMachine.hh>
+#include <hawkeye/Node.hh>
 
 namespace hawkeye
 {

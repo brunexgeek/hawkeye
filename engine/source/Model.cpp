@@ -1,10 +1,10 @@
-#include "Base.h"
-#include "Model.h"
-#include "MeshPart.h"
-#include "Scene.h"
-#include "Technique.h"
-#include "Pass.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Model.hh>
+#include <hawkeye/MeshPart.hh>
+#include <hawkeye/Scene.hh>
+#include <hawkeye/Technique.hh>
+#include <hawkeye/Pass.hh>
+#include <hawkeye/Node.hh>
 
 namespace hawkeye
 {

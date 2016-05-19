@@ -1,8 +1,8 @@
-#include "Base.h"
-#include "FileSystem.h"
-#include "Properties.h"
-#include "Stream.h"
-#include "Platform.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/Properties.hh>
+#include <hawkeye/Stream.hh>
+#include <hawkeye/Platform.hh>
 
 #include <sys/types.h>
 #include <sys/stat.h>

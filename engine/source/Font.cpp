@@ -1,10 +1,10 @@
-#include "Base.h"
-#include "Font.h"
-#include "Text.h"
-#include "Game.h"
-#include "FileSystem.h"
-#include "Bundle.h"
-#include "Material.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Font.hh>
+#include <hawkeye/Text.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/Bundle.hh>
+#include <hawkeye/Material.hh>
 #include <limits.h>
 
 // Default font shaders

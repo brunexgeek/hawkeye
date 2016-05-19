@@ -1,9 +1,9 @@
 // Implementation of base platform-agnostic platform functionality.
-#include "Base.h"
-#include "Platform.h"
-#include "Game.h"
-#include "ScriptController.h"
-#include "Form.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Platform.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/ScriptController.hh>
+#include <hawkeye/Form.hh>
 
 namespace hawkeye
 {

@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "Vector4.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Vector4.hh>
 
 namespace hawkeye
 {

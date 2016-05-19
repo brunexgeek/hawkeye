@@ -1,5 +1,5 @@
-#include "SpriteBatchSample.h"
-#include "SamplesGame.h"
+#include "SpriteBatchSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Sprite Batch", SpriteBatchSample, 5);
@@ -71,7 +71,7 @@ void SpriteBatchSample::render(float elapsedTime)
     _spriteBatch->draw(Vector3(384, 64, 0), src, Vector2(128, 128), Vector4(1, 1, 1, 1), Vector2(0.5f, 0.5f), MATH_DEG_TO_RAD(270));
     _spriteBatch->draw(Vector3(512, 64, 0), src, Vector2(128, 128), Vector4(1, 1, 1, 1), Vector2(0.5f, 0.5f), MATH_DEG_TO_RAD(360));
     _spriteBatch->draw(Vector3(640, 64, 0), src, Vector2(128, 128), Vector4(1, 1, 1, 1), Vector2(0.5f, 0.5f), MATH_DEG_TO_RAD(0));
-    
+
     // Lots of them now small
     unsigned int pointCount = 16;
     unsigned int x = 0;
@@ -80,8 +80,8 @@ void SpriteBatchSample::render(float elapsedTime)
     {
         for (unsigned int j = 0; j < pointCount; j++)
         {
-            _spriteBatch->draw(Rectangle(x, y, 32, 32), src); 
-            x += 32;    
+            _spriteBatch->draw(Rectangle(x, y, 32, 32), src);
+            x += 32;
         }
         x = 0;
         y += 32;
@@ -92,7 +92,7 @@ void SpriteBatchSample::render(float elapsedTime)
     _spriteBatch->start();
 
     // 50% transparent
-    _spriteBatch->draw(Rectangle(x + 512, y - 512, 512, 512), src, Vector4(1, 1, 1, 0.5f)); 
+    _spriteBatch->draw(Rectangle(x + 512, y - 512, 512, 512), src, Vector4(1, 1, 1, 0.5f));
     _spriteBatch->finish();
 
     drawFrameRate(_font, Vector4(0, 0.5f, 1, 1), 5, 1, getFrameRate());

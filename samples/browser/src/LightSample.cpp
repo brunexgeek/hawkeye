@@ -1,16 +1,16 @@
-#include "LightSample.h"
-#include "SamplesGame.h"
+#include "LightSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Light", LightSample, 10);
 #endif
 
 LightSample::LightSample()
-    : _font(NULL), 
-	  _scene(NULL), 
+    : _font(NULL),
+	  _scene(NULL),
       _modelNode(NULL),
-	  _directionalLightNode(NULL), 
-	  _pointLightNode(NULL), 
+	  _directionalLightNode(NULL),
+	  _pointLightNode(NULL),
 	  _spotLightNode(NULL),
 	  _usedForMoving(NULL),
 	  _model(NULL),
@@ -50,7 +50,7 @@ void LightSample::initialize()
     _scene->getActiveCamera()->setAspectRatio(getAspectRatio());
 
 	// Get the wall model node
-	_modelNode = _scene->findNode("wall"); 
+	_modelNode = _scene->findNode("wall");
 	_model = dynamic_cast<Model*>(_modelNode->getDrawable());
 
 	// Create a directional light and a reference icon for the light
@@ -61,7 +61,7 @@ void LightSample::initialize()
 	Mesh* directionalLightQuadMesh = Mesh::createQuad(-0.3f, -0.3f, 0.6f, 0.6f);
 	_directionalLightQuadModel = Model::create(directionalLightQuadMesh);
     SAFE_RELEASE(directionalLightQuadMesh);
-	setUnlitMaterialTexture(_directionalLightQuadModel, "res/png/light-directional.png"); 
+	setUnlitMaterialTexture(_directionalLightQuadModel, "res/png/light-directional.png");
 	_directionalLightNode->setDrawable(_directionalLightQuadModel);
     _directionalLightNode->setTranslation(0.0f, 0.0f, 7.0f);
 	_scene->addNode(_directionalLightNode);
@@ -156,7 +156,7 @@ void LightSample::finalize()
 }
 
 void LightSample::update(float elapsedTime)
-{	
+{
 }
 
 void LightSample::render(float elapsedTime)
@@ -193,7 +193,7 @@ void LightSample::touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int c
 			_touched = true;
 			_touchX = x;
 			_touchY = y;
-			
+
 			Ray pickRay;
 			_scene->getActiveCamera()->pickRay(getViewport(), _touchX, _touchY, &pickRay);
 
@@ -283,7 +283,7 @@ void LightSample::keyEvent(Keyboard::KeyEvent evt, int key)
 void LightSample::controlEvent(Control* control, EventType evt)
 {
     bool changeTechnique = false;
-	
+
 	switch(evt)
     {
 	case Control::Listener::VALUE_CHANGED:
@@ -380,8 +380,8 @@ void LightSample::initializeDirectionalTechnique(const char* technique)
 {
 	_lighting->getTechnique(technique)->getParameter("u_ambientColor")->setValue(Vector3(0.0f, 0.0f, 0.0f));
     _lighting->getTechnique(technique)->getParameter("u_directionalLightColor[0]")->setValue(Vector3(_redSlider->getValue(), _greenSlider->getValue(), _blueSlider->getValue()));
-    _lighting->getTechnique(technique)->getParameter("u_directionalLightDirection[0]")->bindValue(_directionalLightNode, &Node::getForwardVectorView); 
-}	
+    _lighting->getTechnique(technique)->getParameter("u_directionalLightDirection[0]")->bindValue(_directionalLightNode, &Node::getForwardVectorView);
+}
 
 void LightSample::initializeSpotTechnique(const char* technique)
 {

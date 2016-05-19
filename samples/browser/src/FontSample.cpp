@@ -1,5 +1,5 @@
-#include "FontSample.h"
-#include "SamplesGame.h"
+#include "FontSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Font", FontSample, 7);

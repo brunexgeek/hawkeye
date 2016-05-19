@@ -1,5 +1,5 @@
-#include "TriangleSample.h"
-#include "SamplesGame.h"
+#include "TriangleSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Triangle", TriangleSample, 1);
@@ -43,7 +43,7 @@ static Mesh* createTriangleMesh()
 TriangleSample::TriangleSample()
     : _font(NULL), _model(NULL), _spinDirection(-1.0f)
 {
-    
+
 }
 
 void TriangleSample::initialize()
@@ -86,7 +86,7 @@ void TriangleSample::render(float elapsedTime)
 {
     // Clear the color and depth buffers
     clear(CLEAR_COLOR_DEPTH, Vector4::zero(), 1.0f, 0);
-    
+
     // Bind the view projection matrix to the model's parameter. This will transform the vertices when the model is drawn.
     _model->getMaterial()->getParameter("u_worldViewProjectionMatrix")->setValue(_worldViewProjectionMatrix);
     _model->draw();

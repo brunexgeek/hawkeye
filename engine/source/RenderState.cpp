@@ -1,10 +1,10 @@
-#include "Base.h"
-#include "RenderState.h"
-#include "Node.h"
-#include "Pass.h"
-#include "Technique.h"
-#include "Node.h"
-#include "Scene.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/RenderState.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/Pass.hh>
+#include <hawkeye/Technique.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/Scene.hh>
 
 // Render state override bits
 #define RS_BLEND 1

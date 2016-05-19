@@ -4,11 +4,11 @@
  * Much of the collision detection code for this implementation is based off the
  * btbtKinematicCharacterController class from Bullet Physics 2.7.6.
  */
-#include "Base.h"
-#include "PhysicsCharacter.h"
-#include "Scene.h"
-#include "Game.h"
-#include "PhysicsController.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/PhysicsCharacter.hh>
+#include <hawkeye/Scene.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/PhysicsController.hh>
 
 namespace hawkeye
 {

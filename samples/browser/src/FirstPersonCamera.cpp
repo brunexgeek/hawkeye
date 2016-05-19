@@ -1,9 +1,9 @@
-#include "FirstPersonCamera.h"
+#include "FirstPersonCamera.hh"
 
 FirstPersonCamera::FirstPersonCamera()
     : _pitchNode(NULL), _rootNode(NULL)
 {
-    
+
 }
 
 FirstPersonCamera::~FirstPersonCamera()

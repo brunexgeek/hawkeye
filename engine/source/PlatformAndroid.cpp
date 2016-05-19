@@ -1,13 +1,13 @@
 #ifndef GP_NO_PLATFORM
 #ifdef __ANDROID__
 
-#include "Base.h"
-#include "Platform.h"
-#include "FileSystem.h"
-#include "Game.h"
-#include "Gamepad.h"
-#include "Form.h"
-#include "ScriptController.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Platform.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Gamepad.hh>
+#include <hawkeye/Form.hh>
+#include <hawkeye/ScriptController.hh>
 #include <unistd.h>
 #include <android/sensor.h>
 #include <android_native_app_glue.h>

@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "ScriptController.h"
-#include "ScriptTarget.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/ScriptController.hh>
+#include <hawkeye/ScriptTarget.hh>
 
 namespace hawkeye
 {

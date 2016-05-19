@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Technique.h"
-#include "Material.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Technique.hh>
+#include <hawkeye/Material.hh>
+#include <hawkeye/Node.hh>
 
 namespace hawkeye
 {

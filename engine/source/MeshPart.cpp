@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "MeshPart.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/MeshPart.hh>
 
 namespace hawkeye
 {

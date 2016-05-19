@@ -1,8 +1,8 @@
-#include "Base.h"
-#include "AIStateMachine.h"
-#include "AIAgent.h"
-#include "AIMessage.h"
-#include "Game.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/AIStateMachine.hh>
+#include <hawkeye/AIAgent.hh>
+#include <hawkeye/AIMessage.hh>
+#include <hawkeye/Game.hh>
 
 namespace hawkeye
 {

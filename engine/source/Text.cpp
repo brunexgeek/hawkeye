@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Text.h"
-#include "Matrix.h"
-#include "Scene.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Text.hh>
+#include <hawkeye/Matrix.hh>
+#include <hawkeye/Scene.hh>
 
 namespace hawkeye
 {

@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Control.h"
-#include "AbsoluteLayout.h"
-#include "Container.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Control.hh>
+#include <hawkeye/AbsoluteLayout.hh>
+#include <hawkeye/Container.hh>
 
 namespace hawkeye {
 

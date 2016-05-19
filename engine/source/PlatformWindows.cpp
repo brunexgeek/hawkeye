@@ -1,13 +1,13 @@
 #ifndef GP_NO_PLATFORM
 #ifdef WIN32
 
-#include "Base.h"
-#include "Platform.h"
-#include "FileSystem.h"
-#include "Game.h"
-#include "Form.h"
-#include "Vector2.h"
-#include "ScriptController.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Platform.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Form.hh>
+#include <hawkeye/Vector2.hh>
+#include <hawkeye/ScriptController.hh>
 #include <GL/wglew.h>
 #include <windowsx.h>
 #include <Commdlg.h>

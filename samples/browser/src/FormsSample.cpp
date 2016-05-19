@@ -1,4 +1,4 @@
-#include "FormsSample.h"
+#include "FormsSample.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Forms", FormsSample, 8);
@@ -12,7 +12,7 @@ const static unsigned int __formsCount = 5;
 FormsSample::FormsSample()
     : _scene(NULL), _formNode(NULL), _formNodeParent(NULL), _formSelect(NULL), _activeForm(NULL), _gamepad(NULL), _keyFlags(0)
 {
-    const char* formFiles[] = 
+    const char* formFiles[] =
     {
         "res/common/forms/formBasicControls.form",
         "res/common/forms/formScrolling.form",
@@ -46,7 +46,7 @@ void printProperties(Properties* properties, unsigned int tabCount)
         tabs.append("\t");
     }
     GP_WARN("\n%s%s %s\n%s{", tabs.c_str(), spacename, id, tabs.c_str());
- 
+
     // Print all properties in this namespace.
     const char* name = properties->getNextProperty();
     const char* value = NULL;
@@ -56,7 +56,7 @@ void printProperties(Properties* properties, unsigned int tabCount)
         GP_WARN("%s\t%s = %s", tabs.c_str(), name, value);
         name = properties->getNextProperty();
     }
- 
+
     // Print the properties of every namespace within this one.
     Properties* space = properties->getNextNamespace();
     while (space != NULL)
@@ -84,13 +84,13 @@ void FormsSample::initialize()
 
     RadioButton* form2Button = static_cast<RadioButton*>(_formSelect->getControl("form2"));
     form2Button->addListener(this, Control::Listener::CLICK);
-    
+
     RadioButton* form3Button = static_cast<RadioButton*>(_formSelect->getControl("form3"));
     form3Button->addListener(this, Control::Listener::CLICK);
 
     RadioButton* form4Button = static_cast<RadioButton*>(_formSelect->getControl("form4"));
     form4Button->addListener(this, Control::Listener::CLICK);
-    
+
     RadioButton* form5Button = static_cast<RadioButton*>(_formSelect->getControl("form5"));
     form5Button->addListener(this, Control::Listener::CLICK);
     for (unsigned int i = 0; i < _formFiles.size(); i++)
@@ -117,7 +117,7 @@ void FormsSample::initialize()
     _formNodeParent = _scene->addNode("FormParent");
     _formNode = Node::create("Form");
     _formNodeParent->addChild(_formNode);
-    
+
     formChanged();
 
     _gamepad = getGamepad(0);

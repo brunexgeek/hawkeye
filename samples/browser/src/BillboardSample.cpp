@@ -1,6 +1,6 @@
-#include "BillboardSample.h"
-#include "Grid.h"
-#include "SamplesGame.h"
+#include "BillboardSample.hh"
+#include "Grid.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Billboards", BillboardSample, 11);
@@ -196,7 +196,7 @@ void BillboardSample::touchEvent(Touch::TouchEvent evt, int x, int y, unsigned i
         float yaw = MATH_DEG_TO_RAD(deltaX * 0.5f);
         _camera.rotate(yaw, pitch);
         break;
-    }   
+    }
     };
 }
 
@@ -284,8 +284,8 @@ void BillboardSample::loadGround()
 	node->setDrawable(_ground);
     _scene->addNode(node);
 	node->rotateX(MATH_DEG_TO_RAD(90));
-	Effect* effect = Effect::createFromFile("res/shaders/textured.vert", "res/shaders/textured.frag", "TEXTURE_REPEAT");    
-	Material* material = Material::create(effect); 
+	Effect* effect = Effect::createFromFile("res/shaders/textured.vert", "res/shaders/textured.frag", "TEXTURE_REPEAT");
+	Material* material = Material::create(effect);
 	material->getStateBlock()->setDepthTest(true);
 	material->getStateBlock()->setBlend(false);
 	Texture::Sampler* sampler = material->getParameter("u_diffuseTexture")->setValue("res/png/dirt.png", true);
@@ -306,14 +306,14 @@ void BillboardSample::loadBillboards()
     Effect* effect = Effect::createFromFile("res/shaders/textured.vert", "res/shaders/textured.frag", "TEXTURE_DISCARD_ALPHA");
 
 	// Create the model and node and bind the material
-    for ( unsigned int i = 0; i < BILLBOARD_COUNT; i++ ) 
-    {   
+    for ( unsigned int i = 0; i < BILLBOARD_COUNT; i++ )
+    {
 		Node* node = Node::create();
 		Model* model = Model::create(mesh);
 		node->setDrawable(model);
 		_scene->addNode(node);
-        
-		Material* material = Material::create(effect); 
+
+		Material* material = Material::create(effect);
 		material->getStateBlock()->setDepthTest(true);
 		material->getStateBlock()->setBlend(false);
 		material->getParameter("u_diffuseTexture")->setValue("res/png/grass.png" , true);

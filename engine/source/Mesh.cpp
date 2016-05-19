@@ -1,9 +1,9 @@
-#include "Base.h"
-#include "Mesh.h"
-#include "MeshPart.h"
-#include "Effect.h"
-#include "Model.h"
-#include "Material.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Mesh.hh>
+#include <hawkeye/MeshPart.hh>
+#include <hawkeye/Effect.hh>
+#include <hawkeye/Model.hh>
+#include <hawkeye/Material.hh>
 
 namespace hawkeye
 {

@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "ImageControl.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/ImageControl.hh>
 
 namespace hawkeye
 {

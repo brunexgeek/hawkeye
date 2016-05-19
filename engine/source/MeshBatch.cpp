@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "MeshBatch.h"
-#include "Material.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/MeshBatch.hh>
+#include <hawkeye/Material.hh>
 #include <limits.h>
 
 namespace hawkeye

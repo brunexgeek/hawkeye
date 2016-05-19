@@ -1,5 +1,5 @@
-#include "PostProcessSample.h"
-#include "SamplesGame.h"
+#include "PostProcessSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Post Process", PostProcessSample, 14);
@@ -26,7 +26,7 @@ PostProcessSample::Compositor* PostProcessSample::Compositor::create(FrameBuffer
         _quadModel = Model::create(mesh);
         SAFE_RELEASE(mesh);
     }
-    
+
     return new Compositor(srcBuffer, dstBuffer, material, techniqueId);
 }
 
@@ -40,14 +40,14 @@ PostProcessSample::Compositor::~Compositor()
     SAFE_RELEASE(_material);
 }
 
-FrameBuffer* PostProcessSample::Compositor::getSrcFrameBuffer() const 
-{ 
-    return _srcBuffer; 
+FrameBuffer* PostProcessSample::Compositor::getSrcFrameBuffer() const
+{
+    return _srcBuffer;
 }
 
 FrameBuffer* PostProcessSample::Compositor::getDstFrameBuffer() const
-{ 
-    return _dstBuffer; 
+{
+    return _dstBuffer;
 }
 
 const char* PostProcessSample::Compositor::getTechniqueId() const
@@ -167,7 +167,7 @@ void PostProcessSample::update(float elapsedTime)
 void PostProcessSample::render(float elapsedTime)
 {
     Rectangle defaultViewport = Game::getInstance()->getViewport();
-    
+
     // Draw into the framebuffer
     Game::getInstance()->setViewport(Rectangle(FRAMEBUFFER_WIDTH, FRAMEBUFFER_HEIGHT));
     FrameBuffer* previousFrameBuffer = _frameBuffer->bind();
@@ -209,7 +209,7 @@ void PostProcessSample::render(float elapsedTime)
 
 bool PostProcessSample::drawScene(Node* node)
 {
-    Drawable* drawable = node->getDrawable(); 
+    Drawable* drawable = node->getDrawable();
     if (drawable)
         drawable->draw();
     return true;

@@ -1,5 +1,5 @@
-#include "Slider.h"
-#include "Game.h"
+#include <hawkeye/Slider.hh>
+#include <hawkeye/Game.hh>
 
 namespace hawkeye
 {

@@ -1,6 +1,6 @@
-#include "Base.h"
-#include "CheckBox.h"
-#include "Game.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/CheckBox.hh>
+#include <hawkeye/Game.hh>
 
 namespace hawkeye
 {

@@ -1,4 +1,4 @@
-#include "SamplesGame.h"
+#include "SamplesGame.hh"
 
 using std::string;
 using std::pair;

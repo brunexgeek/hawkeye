@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Transform.h"
-#include "Game.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Transform.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Node.hh>
 
 namespace hawkeye
 {

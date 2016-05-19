@@ -1,8 +1,8 @@
-#include "Base.h"
-#include "Theme.h"
-#include "ThemeStyle.h"
-#include "Game.h"
-#include "FileSystem.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Theme.hh>
+#include <hawkeye/ThemeStyle.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/FileSystem.hh>
 
 namespace hawkeye
 {

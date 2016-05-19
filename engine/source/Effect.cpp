@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Effect.h"
-#include "FileSystem.h"
-#include "Game.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Effect.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/Game.hh>
 
 #define OPENGL_ES_DEFINE  "OPENGL_ES"
 
@@ -142,7 +142,7 @@ static void replaceDefines(const char* defines, std::string& out)
 
 static void replaceIncludes(const char* filepath, const char* source, std::string& out)
 {
-    // Replace the #include "xxxx.xxx" with the sourced file contents of "filepath/xxxx.xxx"
+    // Replace the #include <hawkeye/xxxx.xxxh> with the sourced file contents of "filepath/xxxx.xxx"
     std::string str = source;
     size_t lastPos = 0;
     size_t headPos = 0;
@@ -249,7 +249,7 @@ Effect* Effect::createFromSource(const char* vshPath, const char* vshSource, con
     std::string vshSourceStr = "";
     if (vshPath)
     {
-        // Replace the #include "xxxxx.xxx" with the sources that come from file paths
+        // Replace the #include <hawkeye/xxxxx.xxxh> with the sources that come from file paths
         replaceIncludes(vshPath, vshSource, vshSourceStr);
         if (vshSource && strlen(vshSource) != 0)
             vshSourceStr += "\n";
@@ -290,7 +290,7 @@ Effect* Effect::createFromSource(const char* vshPath, const char* vshSource, con
     std::string fshSourceStr;
     if (fshPath)
     {
-        // Replace the #include "xxxxx.xxx" with the sources that come from file paths
+        // Replace the #include <hawkeye/xxxxx.xxxh> with the sources that come from file paths
         replaceIncludes(fshPath, fshSource, fshSourceStr);
         if (fshSource && strlen(fshSource) != 0)
             fshSourceStr += "\n";

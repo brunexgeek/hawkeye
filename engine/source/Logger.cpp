@@ -1,7 +1,7 @@
 
-#include "Base.h"
-#include "Game.h"
-#include "ScriptController.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/ScriptController.hh>
 
 namespace hawkeye
 {

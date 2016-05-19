@@ -1,8 +1,8 @@
-#include "Base.h"
-#include "PhysicsConstraint.h"
-#include "Game.h"
-#include "Node.h"
-#include "PhysicsRigidBody.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/PhysicsConstraint.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/PhysicsRigidBody.hh>
 
 namespace hawkeye
 {

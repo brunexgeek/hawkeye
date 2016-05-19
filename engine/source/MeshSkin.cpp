@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "MeshSkin.h"
-#include "Joint.h"
-#include "Model.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/MeshSkin.hh>
+#include <hawkeye/Joint.hh>
+#include <hawkeye/Model.hh>
 
 // The number of rows in each palette matrix.
 #define PALETTE_ROWS 3

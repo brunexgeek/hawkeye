@@ -1,5 +1,5 @@
-#include "SceneLoadSample.h"
-#include "SamplesGame.h"
+#include "SceneLoadSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Scene Loading", SceneLoadSample, 16);
@@ -8,7 +8,7 @@
 SceneLoadSample::SceneLoadSample()
     : _font(NULL), _scene(NULL), _wireFrame(false)
 {
-    
+
 }
 
 void SceneLoadSample::initialize()
@@ -50,7 +50,7 @@ void SceneLoadSample::finalize()
 
 void SceneLoadSample::update(float elapsedTime)
 {
-    
+
 }
 
 void SceneLoadSample::render(float elapsedTime)

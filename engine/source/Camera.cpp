@@ -1,9 +1,9 @@
-#include "Base.h"
-#include "Camera.h"
-#include "Game.h"
-#include "Node.h"
-#include "Game.h"
-#include "PhysicsController.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Camera.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/PhysicsController.hh>
 
 // Camera dirty bits
 #define CAMERA_DIRTY_VIEW 1

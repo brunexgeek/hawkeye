@@ -1,5 +1,5 @@
-#include "MeshBatchSample.h"
-#include "SamplesGame.h"
+#include "MeshBatchSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Mesh Batch", MeshBatchSample, 3);
@@ -109,7 +109,7 @@ void MeshBatchSample::addTriangle(int x, int y)
 {
     // Calculate the vertices of the equilateral triangle.
     // length of the side (between 40 and 120)
-    float a = MATH_RANDOM_0_1() * 80.0 + 40.0f;  
+    float a = MATH_RANDOM_0_1() * 80.0 + 40.0f;
     Vector3 p1(0.0f,       a / sqrtf(3.0f), 0);
     Vector3 p2(-a / 2.0f, -a / (2.0f * sqrtf(3.0f)), 0);
     Vector3 p3( a / 2.0f, -a / (2.0f * sqrtf(3.0f)), 0);
@@ -121,11 +121,11 @@ void MeshBatchSample::addTriangle(int x, int y)
     m.transformPoint(p1, &p1);
     m.transformPoint(p2, &p2);
     m.transformPoint(p3, &p3);
-    
+
     // Added the triangle to the list with random vertex colors.
     _vertices.push_back(Vertex(p1, randomColor()));
     _vertices.push_back(Vertex(p2, randomColor()));
     _vertices.push_back(Vertex(p3, randomColor()));
-    
+
     _lastTriangleAdded = Game::getInstance()->getAbsoluteTime();
 }

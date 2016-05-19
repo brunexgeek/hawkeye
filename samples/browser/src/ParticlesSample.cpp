@@ -1,5 +1,5 @@
-#include "ParticlesSample.h"
-#include "SamplesGame.h"
+#include "ParticlesSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
 ADD_SAMPLE("Graphics", "Particles", ParticlesSample, 9);

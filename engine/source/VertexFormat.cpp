@@ -1,5 +1,5 @@
-#include "Base.h"
-#include "VertexFormat.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/VertexFormat.hh>
 
 namespace hawkeye
 {

@@ -1,11 +1,11 @@
-#include "Base.h"
-#include "Material.h"
-#include "FileSystem.h"
-#include "Effect.h"
-#include "Technique.h"
-#include "Pass.h"
-#include "Properties.h"
-#include "Node.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Material.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/Effect.hh>
+#include <hawkeye/Technique.hh>
+#include <hawkeye/Pass.hh>
+#include <hawkeye/Properties.hh>
+#include <hawkeye/Node.hh>
 
 
 namespace hawkeye

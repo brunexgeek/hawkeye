@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Properties.h"
-#include "FileSystem.h"
-#include "Quaternion.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Properties.hh>
+#include <hawkeye/FileSystem.hh>
+#include <hawkeye/Quaternion.hh>
 
 namespace hawkeye
 {

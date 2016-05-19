@@ -1,9 +1,9 @@
-#include <hawkeye/Base.h>
-#include <hawkeye/Node.h>
-#include <hawkeye/AudioController.h>
-#include <hawkeye/AudioSource.h>
-#include <hawkeye/Game.h>
-#include <hawkeye/Node.h>
+#include <hawkeye/Base.hh>
+#include <hawkeye/Node.hh>
+#include <hawkeye/AudioController.hh>
+#include <hawkeye/AudioSource.hh>
+#include <hawkeye/Game.hh>
+#include <hawkeye/Node.hh>
 #include "OpenAudioSource.hh"
 #include "OpenAudioController.hh"
 

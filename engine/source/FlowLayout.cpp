@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "Control.h"
-#include "FlowLayout.h"
-#include "Container.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/Control.hh>
+#include <hawkeye/FlowLayout.hh>
+#include <hawkeye/Container.hh>
 
 namespace hawkeye
 {

@@ -1,5 +1,5 @@
-#include "Script.h"
-#include "ScriptController.h"
+#include <hawkeye/Script.hh>
+#include <hawkeye/ScriptController.hh>
 
 namespace hawkeye
 {

@@ -1,7 +1,7 @@
-#include "Base.h"
-#include "VertexAttributeBinding.h"
-#include "Mesh.h"
-#include "Effect.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/VertexAttributeBinding.hh>
+#include <hawkeye/Mesh.hh>
+#include <hawkeye/Effect.hh>
 
 namespace hawkeye
 {

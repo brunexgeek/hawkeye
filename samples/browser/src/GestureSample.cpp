@@ -1,10 +1,10 @@
-#include "GestureSample.h"
-#include "SamplesGame.h"
+#include "GestureSample.hh"
+#include "SamplesGame.hh"
 
 #include <sstream>
 
 // Linux and windows don't support gestures right now
-#if defined(__ANDROID__) || defined(__APPLE__) 
+#if defined(__ANDROID__) || defined(__APPLE__)
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Input", "Gestures", GestureSample, 2);
 #endif
@@ -87,7 +87,7 @@ void GestureSample::render(float elapsedTime)
     // Draw text
     Vector4 fontColor(1.0f, 1.0f, 1.0f, 1.0f);
     unsigned int fontSize = 18;
-    
+
     _font->start();
     int y = 0;
     size_t count = 0;
@@ -103,7 +103,7 @@ void GestureSample::render(float elapsedTime)
             break;
         }
     }
-    
+
     int x = getWidth() - 200;
     y = getHeight() - fontSize * 6;
 
@@ -182,7 +182,7 @@ void GestureSample::gestureSwipeEvent(int x, int y, int direction)
     convert << ") " << x << ", " << y;
     _eventLog.push_front(convert.str());
 }
-   
+
 void GestureSample::gesturePinchEvent(int x, int y, float scale)
 {
     std::ostringstream convert;

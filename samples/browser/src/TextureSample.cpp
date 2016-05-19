@@ -1,5 +1,5 @@
-#include "TextureSample.h"
-#include "SamplesGame.h"
+#include "TextureSample.hh"
+#include "SamplesGame.hh"
 
 #if defined(ADD_SAMPLE)
     ADD_SAMPLE("Graphics", "Textures", TextureSample, 4);
@@ -14,7 +14,7 @@ Node* addQuadModelAndNode(Scene* scene, Mesh* mesh)
     return node;
 }
 
-Node* addQuadModelAndNode(Scene* scene, float x, float y, float width, float height, 
+Node* addQuadModelAndNode(Scene* scene, float x, float y, float width, float height,
                           float s1 = 0.0f, float t1 = 0.0f, float s2 = 1.0f, float t2 = 1.0f)
 {
     Mesh* mesh = Mesh::createQuad(x, y, width, height, s1, t1, s2, t2);
@@ -43,7 +43,7 @@ Material* setTextureUnlitMaterial(Model* model, const char* texturePath, bool mi
 
 TextureSample::TextureSample()
     : _font(NULL), _scene(NULL), _zOffset(0.0f)
-{   
+{
 }
 
 void TextureSample::initialize()
@@ -75,7 +75,7 @@ void TextureSample::initialize()
         node->setTranslation(-25, cubeSize, 0);
         // Find the position of the node in screen space
         _scene->getActiveCamera()->project(getViewport(), node->getTranslationWorld(), &x, &y);
-        
+
         //_text.push_back(Text::create("res/ui/arial.gpb", "Quad: Textured", Rectangle(x, y, textWidth, fontSize), Vector4::one(), fontSize, Font::ALIGN_TOP_HCENTER, false));
     }
     // Textured quad points

@@ -1,11 +1,11 @@
 #ifndef HAWKEYE_PAL_AUDIOSOURCE_HH
 #define HAWKEYE_PAL_AUDIOSOURCE_HH
 
-#include <hawkeye/Vector3.h>
-#include <hawkeye/Ref.h>
-#include <hawkeye/Transform.h>
-#include <hawkeye/openal.h>
-#include <hawkeye/AudioSource.h>
+#include <hawkeye/Vector3.hh>
+#include <hawkeye/Ref.hh>
+#include <hawkeye/Transform.hh>
+#include <hawkeye/openal.hh>
+#include <hawkeye/AudioSource.hh>
 #include "OpenAudioBuffer.hh"
 
 namespace hawkeye {

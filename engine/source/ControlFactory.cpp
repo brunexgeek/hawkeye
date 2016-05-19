@@ -1,14 +1,14 @@
-#include "Base.h"
-#include "ControlFactory.h"
-#include "Label.h"
-#include "Button.h"
-#include "CheckBox.h"
-#include "RadioButton.h"
-#include "Container.h"
-#include "Slider.h"
-#include "TextBox.h"
-#include "JoystickControl.h"
-#include "ImageControl.h"
+#include <hawkeye/Base.hh>
+#include <hawkeye/ControlFactory.hh>
+#include <hawkeye/Label.hh>
+#include <hawkeye/Button.hh>
+#include <hawkeye/CheckBox.hh>
+#include <hawkeye/RadioButton.hh>
+#include <hawkeye/Container.hh>
+#include <hawkeye/Slider.hh>
+#include <hawkeye/TextBox.hh>
+#include <hawkeye/JoystickControl.hh>
+#include <hawkeye/ImageControl.hh>
 
 namespace hawkeye
 {
