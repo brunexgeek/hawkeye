@@ -8,7 +8,7 @@ else(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 file(GLOB HAWKEYE_SRC
-    "source/*.cpp"
+    "source/*.cc"
     "source/pal/*.cc"
 )
 
