@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Game.hh>
 #include <hawkeye/Control.hh>
@@ -1266,8 +1267,8 @@ void Control::updateAbsoluteBounds(const Vector2& offset)
 
     // Calculate the local clipped bounds
     _clipBounds.set(
-        max(_absoluteClipBounds.x - _absoluteBounds.x, 0.0f),
-        max(_absoluteClipBounds.y - _absoluteBounds.y, 0.0f),
+        std::max(_absoluteClipBounds.x - _absoluteBounds.x, 0.0f),
+        std::max(_absoluteClipBounds.y - _absoluteBounds.y, 0.0f),
         _absoluteClipBounds.width,
         _absoluteClipBounds.height
         );

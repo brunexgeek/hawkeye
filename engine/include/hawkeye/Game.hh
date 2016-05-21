@@ -1,6 +1,8 @@
 #ifndef GAME_H_
 #define GAME_H_
 
+#include <queue>
+
 #include <hawkeye/Keyboard.hh>
 #include <hawkeye/Mouse.hh>
 #include <hawkeye/Touch.hh>

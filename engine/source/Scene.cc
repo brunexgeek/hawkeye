@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/AudioListener.hh>
 #include <hawkeye/Scene.hh>

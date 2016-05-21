@@ -1,20 +1,11 @@
 #ifndef NODE_H_
 #define NODE_H_
 
+
 #include <hawkeye/Transform.hh>
-#include <hawkeye/ScriptTarget.hh>
-#include <hawkeye/Model.hh>
-#include <hawkeye/Sprite.hh>
-#include <hawkeye/TileSet.hh>
-#include <hawkeye/Text.hh>
-#include <hawkeye/Form.hh>
-#include <hawkeye/ParticleEmitter.hh>
-#include <hawkeye/Camera.hh>
-#include <hawkeye/Light.hh>
+#include <hawkeye/Ref.hh>
+#include <hawkeye/PhysicsCollisionShape.hh>
 #include <hawkeye/PhysicsRigidBody.hh>
-#include <hawkeye/PhysicsCollisionObject.hh>
-#include <hawkeye/BoundingBox.hh>
-#include <hawkeye/AIAgent.hh>
 
 namespace hawkeye
 {
@@ -25,6 +16,12 @@ class Light;
 class AudioSource;
 class AIAgent;
 class Drawable;
+class PhysicsCollisionObject;
+class Matrix;
+class Vector2;
+class Vector3;
+class Vector4;
+
 
 /**
  * Defines a hierarchical structure of objects in 3D transformation spaces.
@@ -40,7 +37,7 @@ class Node : public Transform, public Ref
     friend class SceneLoader;
     friend class Bundle;
     friend class MeshSkin;
-    friend class Light;
+    //friend class Light;
 
     GP_SCRIPT_EVENTS_START();
     GP_SCRIPT_EVENT(update, "<Node>f");
@@ -607,6 +604,11 @@ public:
      */
     Node* clone() const;
 
+    /**
+     * Marks the bounding volume of the node as dirty.
+     */
+    void setBoundsDirty();
+
 protected:
 
     /**
@@ -661,11 +663,6 @@ protected:
     void hierarchyChanged();
 
     /**
-     * Marks the bounding volume of the node as dirty.
-     */
-    void setBoundsDirty();
-
-    /**
      * Returns the first child node that matches the given ID.
      *
      * This method checks the specified ID against its immediate child nodes
@@ -692,7 +689,7 @@ protected:
      * @param exactMatch true if only nodes whose ID exactly matches the specified ID are returned,
      *        or false if nodes that start with the given ID are returned.
      * @param skipSkin Set true to skip skin hierarchy, initial find may set false to include skin hierarchy.
-     * 
+     *
      * @return The number of matches found.
      * @script{ignore}
      */
@@ -729,7 +726,7 @@ protected:
     /** The number of child nodes. */
     unsigned int _childCount;
     /** If this node is enabled. Maybe different if parent is enabled/disabled. */
-    bool _enabled; 
+    bool _enabled;
     /** Tags assigned to this node. */
     std::map<std::string, std::string>* _tags;
     /** The drawble component attached to this node. */

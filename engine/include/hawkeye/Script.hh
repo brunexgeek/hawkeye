@@ -1,6 +1,7 @@
 #ifndef SCRIPT_H_
 #define SCRIPT_H_
 
+#include <string>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Ref.hh>
 
@@ -28,7 +29,7 @@ public:
          *
          * Scripts that execute in the global environment must be careful to not override
          * other variables or functions that already exist in the global environment (unless
-         * this is intended). Because of this, script naming conventions and the use of 
+         * this is intended). Because of this, script naming conventions and the use of
          * unique namespaces is important to prevent naming collisions with other global code.
          */
         GLOBAL,
@@ -36,7 +37,7 @@ public:
         /**
          * Protected scripts execute in a more limited sandbox environment that by default does
          * not allow other scripts to see their variables or functions. Variables and functions
-         * in a protected script can be named the same as those in other scripts without 
+         * in a protected script can be named the same as those in other scripts without
          * collision issues.
          *
          * Although global code cannot access protected scripts, protected scripts can acceess
@@ -46,7 +47,7 @@ public:
          *
          * Protected scripts are best used when associated with a single game object, since
          * these scripts are not cached the same way global scripts are. Each time a protected
-         * script is loaded, a new instance of the script is loaded. This allows protected 
+         * script is loaded, a new instance of the script is loaded. This allows protected
          * scripts to store per-instance state, since it will not be shared by multiple instances.
          *
          * @see ScriptTarget
@@ -77,13 +78,13 @@ public:
      */
     bool functionExists(const char* name) const;
 
-    /** 
+    /**
      * Reloads this script.
      *
      * The code in the script will be reloaded and any functions and variables will be overwritten
      * into the script's envrionment.
      *
-     * If the script is GLOBAL in scope, it will simply be re-run, replacing any existing global 
+     * If the script is GLOBAL in scope, it will simply be re-run, replacing any existing global
      * variables and functions. If the script has changed, any previous variables or functions that
      * do not exist in the updated script will remain in the global environment.
      *

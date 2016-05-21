@@ -1,6 +1,11 @@
 #ifndef EFFECT_H_
 #define EFFECT_H_
 
+#include <stdint.h>
+#include <cstdlib>
+#include <set>
+#include <map>
+
 #include <hawkeye/Ref.hh>
 #include <hawkeye/Vector2.hh>
 #include <hawkeye/Vector3.hh>

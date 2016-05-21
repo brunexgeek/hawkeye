@@ -1,6 +1,8 @@
 #ifndef RENDERSTATE_H_
 #define RENDERSTATE_H_
 
+#include <map>
+#include <vector>
 #include <hawkeye/Ref.hh>
 #include <hawkeye/Vector3.hh>
 #include <hawkeye/Vector4.hh>

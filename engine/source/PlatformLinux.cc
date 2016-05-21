@@ -1391,7 +1391,7 @@ void Platform::sleep(long ms)
 
 void Platform::setMultiSampling(bool enabled)
 {
-	std::cout << "Anti-aliasing is " << enabled << std::endl;
+	//std::cout << "Anti-aliasing is " << enabled << std::endl;
     if (enabled == __multiSampling)
     {
         return;

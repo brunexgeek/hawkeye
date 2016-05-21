@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "SamplesGame.hh"
 
 using std::string;

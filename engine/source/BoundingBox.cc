@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/BoundingBox.hh>
 #include <hawkeye/BoundingSphere.hh>

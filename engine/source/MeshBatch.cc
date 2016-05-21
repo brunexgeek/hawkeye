@@ -1,3 +1,4 @@
+#include <cstring>
 #include <hawkeye/Base.hh>
 #include <hawkeye/MeshBatch.hh>
 #include <hawkeye/Material.hh>

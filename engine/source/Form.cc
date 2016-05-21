@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Form.hh>
 #include <hawkeye/AbsoluteLayout.hh>
@@ -373,7 +374,7 @@ Control* Form::findInputControl(Control* control, int x, int y, bool focus, unsi
 
     Control* result = NULL;
 
-    // Does the passed in control's bounds intersect the specified coordinates - and 
+    // Does the passed in control's bounds intersect the specified coordinates - and
     // does the control support the specified input state?
     if (control->_consumeInputEvents && (!focus || control->canFocus()))
     {

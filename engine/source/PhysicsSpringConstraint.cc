@@ -1,3 +1,4 @@
+#include <hawkeye/DebugNew.hh>
 #include <hawkeye/Base.hh>
 #include <hawkeye/PhysicsSpringConstraint.hh>
 #include <hawkeye/Node.hh>

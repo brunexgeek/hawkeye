@@ -1,3 +1,5 @@
+#include <cstring>
+#include <cmath>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Quaternion.hh>
 

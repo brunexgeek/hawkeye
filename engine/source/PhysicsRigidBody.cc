@@ -1,3 +1,4 @@
+#include <hawkeye/DebugNew.hh>
 #include <hawkeye/Base.hh>
 #include <hawkeye/PhysicsRigidBody.hh>
 #include <hawkeye/PhysicsController.hh>

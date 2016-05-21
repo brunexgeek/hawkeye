@@ -1,3 +1,5 @@
+#include <cmath>
+#include <hawkeye/Logger.hh>
 #include <hawkeye/Base.hh>
 #include <hawkeye/HeightField.hh>
 #include <hawkeye/Image.hh>
@@ -28,7 +30,7 @@ HeightField* HeightField::create(unsigned int columns, unsigned int rows)
 float normalizedHeightPacked(float r, float g, float b)
 {
     // This formula is intended for 24-bit packed heightmap images (that are generated
-    // with gameplay-encoder. However, it is also compatible with normal grayscale 
+    // with gameplay-encoder. However, it is also compatible with normal grayscale
     // heightmap images, with an error of approximately 0.4%. This can be seen by
     // setting r=g=b=x and comparing the grayscale height expression to the packed
     // height expression: the error is 2^-8 + 2^-16 which is just under 0.4%.
@@ -175,8 +177,8 @@ float HeightField::getHeight(float column, float row) const
     unsigned int x2 = x1 + 1;
     unsigned int y2 = y1 + 1;
     float tmp;
-    float xFactor = modf(column, &tmp);
-    float yFactor = modf(row, &tmp);
+    float xFactor = std::modf(column, &tmp);
+    float yFactor = std::modf(row, &tmp);
     float xFactorI = 1.0f - xFactor;
     float yFactorI = 1.0f - yFactor;
 

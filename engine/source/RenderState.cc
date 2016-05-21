@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/RenderState.hh>
 #include <hawkeye/Node.hh>

@@ -1,3 +1,5 @@
+#include <algorithm>
+#include <hawkeye/DebugNew.hh>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Game.hh>
 #include <hawkeye/MathUtil.hh>
@@ -305,7 +307,7 @@ float PhysicsVehicle::getSteering(float v, float rawSteering) const
     float gain = 1;
     if (_steerdownSpeed > MATH_FLOAT_SMALL)
     {
-        gain = max(_steerdownGain, 1 - (1 - _steerdownGain) * fabs(v) / _steerdownSpeed);
+        gain = std::max((double)_steerdownGain, 1 - (1 - _steerdownGain) * fabs(v) / _steerdownSpeed);
     }
 
     return rawSteering * gain;
@@ -317,11 +319,11 @@ float PhysicsVehicle::getBraking(float v, float rawBraking) const
     float delta = _brakedownFull - _brakedownStart;
     if (delta > MATH_FLOAT_SMALL)
     {
-        reduc = max(0.0f, (v - _brakedownStart) / delta);
+        reduc = std::max(0.0f, (v - _brakedownStart) / delta);
         reduc *= reduc;
     }
 
-    return max(0.0f, rawBraking - reduc);
+    return std::max(0.0f, rawBraking - reduc);
 }
 
 float PhysicsVehicle::getDriving(float v, float rawDriving, float rawBraking) const
@@ -330,14 +332,14 @@ float PhysicsVehicle::getDriving(float v, float rawDriving, float rawBraking) co
     float delta = _drivedownFull - _drivedownStart;
     if (rawBraking == 0 && delta > MATH_FLOAT_SMALL)
     {
-        reduc = max(0.0f, (v - _drivedownStart) / delta);
+        reduc = std::max(0.0f, (v - _drivedownStart) / delta);
         reduc *= reduc;
     }
 
     float gain = 1;
     if (_boostSpeed > MATH_FLOAT_SMALL)
     {
-        gain = max(1.0f, _boostGain - (_boostGain - 1) * fabs(v) / _boostSpeed);
+        gain = std::max(1.0, _boostGain - (_boostGain - 1) * fabs(v) / _boostSpeed);
     }
 
     return gain * rawDriving - reduc;

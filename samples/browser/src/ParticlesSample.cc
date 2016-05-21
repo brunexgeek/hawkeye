@@ -1,3 +1,4 @@
+#include <sstream>
 #include "ParticlesSample.hh"
 #include "SamplesGame.hh"
 

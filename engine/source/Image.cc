@@ -1,7 +1,11 @@
+#include <cstring>
+#include <memory>
+#include <cassert>
 #include <hawkeye/Base.hh>
 #include <hawkeye/FileSystem.hh>
 #include <hawkeye/Image.hh>
 #include <png.h>
+#include <hawkeye/Logger.hh>
 
 namespace hawkeye
 {

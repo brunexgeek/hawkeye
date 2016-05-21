@@ -1,6 +1,10 @@
 #ifndef HAWKEYE_PAL_AUDIOCONTROLLER_HH
 #define HAWKEYE_PAL_AUDIOCONTROLLER_HH
 
+#include <set>
+#include <memory>
+#include <thread>
+#include <mutex>
 
 #include <hawkeye/AudioController.hh>
 #include <hawkeye/AudioSource.hh>

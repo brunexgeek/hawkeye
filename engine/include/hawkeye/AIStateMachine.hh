@@ -1,6 +1,7 @@
 #ifndef AISTATEMACHINE_H_
 #define AISTATEMACHINE_H_
 
+#include <list>
 #include <hawkeye/AIState.hh>
 
 namespace hawkeye {

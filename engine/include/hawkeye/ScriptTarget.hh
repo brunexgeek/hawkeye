@@ -1,7 +1,12 @@
 #ifndef SCRIPTTARGET_H_
 #define SCRIPTTARGET_H_
 
+#include <cassert>
+#include <vector>
+#include <map>
+
 #include <hawkeye/Script.hh>
+#include <hawkeye/Logger.hh>
 
 namespace hawkeye
 {
@@ -85,7 +90,7 @@ public: \
  * Registers the defined script events for a ScriptTarget.
  *
  * This macro should be called at the beginning of all constructors of a
- * ScriptTarget child class that contains one or more script event 
+ * ScriptTarget child class that contains one or more script event
  * declarations (via the GP_SCRIPT_EVENT macro).
  *
  * @script{ignore}
@@ -98,7 +103,7 @@ public: \
  *
  * Classes that extend ScriptTarget can expose script events using the GP_SCRIPT_EVENT macros.
  * Custom events should be registered using these macros at the top of the class definition.
- * Events can be fired by calling the ScriptTarget::fireScriptEvent method, passing the 
+ * Events can be fired by calling the ScriptTarget::fireScriptEvent method, passing the
  * registered ScriptTarget::Event object and any required parameters.
  *
  * In addition to script events that are explicitly defined by a custom ScriptTarget class,
@@ -246,7 +251,7 @@ public:
      * to be global script functions. Registering individual callbacks in this
      * manner is generally slower than registering a single script to handle script
      * events for an object.
-     * 
+     *
      * @param event The event to add the callback for.
      * @param function The name of the script function to call when the event is fired; can either be
      *  just the name of a function (if the function's script file has already been loaded), or can be
@@ -256,7 +261,7 @@ public:
 
     /**
      * Removes the given script function as a callback for the given event.
-     * 
+     *
      * @param event The event to remove the callback for.
      * @param function The name of the script function.
      */
@@ -300,7 +305,7 @@ public:
      * return type is used and there are multiple scripts registered for the
      * given script event, event delegation will stop at the first script
      * that returns a value of true.
-     * 
+     *
      * @param event The script event to fire, which was returned from EventRegistry::addEvent.
      * @param ... Optional list of arguments to pass to the script event (should match the
      *      script event argument definition).
@@ -386,7 +391,7 @@ protected:
     void removeScript(ScriptEntry* entry);
 
     /**
-     * Registers a set of supported script events and event arguments for this ScriptTarget. 
+     * Registers a set of supported script events and event arguments for this ScriptTarget.
      *
      * The passed in EventRegistry object should contain a list of all script events to
      * be supported by this ScriptTarget, along with their parameter definitions. This
@@ -419,8 +424,8 @@ template<typename T> T ScriptTarget::fireScriptEvent(const Event* event, ...)
     GP_ERROR("Unsupported return type for template function ScriptTarget::fireScriptEvent.");
 }
 
-/** 
- * Template specialization. 
+/**
+ * Template specialization.
  *
  * @param evt The event fired.
  * @param ... Optional list of arguments to pass to the script event (should match the
@@ -428,7 +433,7 @@ template<typename T> T ScriptTarget::fireScriptEvent(const Event* event, ...)
  */
 template<> void ScriptTarget::fireScriptEvent<void>(const Event* evt, ...);
 
-/** 
+/**
  * Template specialization.
  *
  * @param evt The event fired.

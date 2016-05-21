@@ -1,5 +1,8 @@
+#include <cassert>
+#include <cstring>
 #include <hawkeye/Base.hh>
 #include <hawkeye/FileSystem.hh>
+#include <hawkeye/Logger.hh>
 #include "OpenAudioBuffer.hh"
 
 namespace hawkeye {

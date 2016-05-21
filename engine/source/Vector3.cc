@@ -1,3 +1,4 @@
+#include <cmath>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Vector3.hh>
 #include <hawkeye/MathUtil.hh>

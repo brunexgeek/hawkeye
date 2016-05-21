@@ -1,56 +1,6 @@
 #ifndef BASE_H_
 #define BASE_H_
 
-// C/C++
-#include <new>
-#include <memory>
-#include <cstdio>
-#include <cstdlib>
-#include <cassert>
-#include <cwchar>
-#include <cwctype>
-#include <cctype>
-#include <cmath>
-#include <cstdarg>
-#include <ctime>
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <cstring>
-#include <vector>
-#include <list>
-#include <set>
-#include <stack>
-#include <map>
-#include <unordered_map>
-#include <queue>
-#include <algorithm>
-#include <limits>
-#include <functional>
-#include <bitset>
-#include <typeinfo>
-#include <thread>
-#include <mutex>
-#include <chrono>
-#include <hawkeye/Logger.hh>
-
-// Bring common functions from C into global namespace
-using std::memcpy;
-using std::fabs;
-using std::sqrt;
-using std::cos;
-using std::sin;
-using std::tan;
-using std::isspace;
-using std::isdigit;
-using std::toupper;
-using std::tolower;
-using std::size_t;
-using std::min;
-using std::max;
-using std::modf;
-using std::atoi;
-
 // Common
 #ifndef NULL
 #define NULL     0
@@ -125,7 +75,7 @@ extern int strcmpnocase(const char* s1, const char* s2);
 
 
 // Debug new for memory leak detection
-#include <hawkeye/DebugNew.hh>
+//#include <hawkeye/DebugNew.hh>
 
 // Object deletion macro
 #define SAFE_DELETE(x) \
@@ -174,16 +124,6 @@ extern int strcmpnocase(const char* s1, const char* s2);
     #define NOMINMAX
 #endif
 
-
-// Compressed Media
-//#include <vorbis/vorbisfile.h>
-
-// Image
-//#include <png.h>
-
-// Scripting
-//using std::va_list;
-//#include <lua/lua.hpp>
 
 #define WINDOW_VSYNC        1
 

@@ -1,3 +1,5 @@
+#include <cmath>
+#include <cstring>
 #include <hawkeye/Base.hh>
 #include <hawkeye/JoystickControl.hh>
 

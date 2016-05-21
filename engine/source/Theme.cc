@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Theme.hh>
 #include <hawkeye/ThemeStyle.hh>
@@ -153,7 +154,7 @@ Theme* Theme::create(const char* url)
     {
         // First load all cursors, checkboxes etc. that can be referred to by styles.
         const char* spacename = space->getNamespace();
-            
+
         if (strcmpnocase(spacename, "image") == 0)
         {
             theme->_images.push_back(ThemeImage::create(tw, th, space, Vector4::one()));
@@ -380,7 +381,7 @@ Theme* Theme::create(const char* url)
                     {
                         cursor = normal->getCursor();
                     }
-                        
+
                     if (!skin)
                     {
                         skin = normal->getSkin();
@@ -598,7 +599,7 @@ Theme::ThemeImage* Theme::ThemeImage::create(float tw, float th, Properties* pro
 {
     GP_ASSERT(properties);
 
-    Vector4 regionVector;                
+    Vector4 regionVector;
     properties->getVector4("region", &regionVector);
     const Rectangle region(regionVector.x, regionVector.y, regionVector.z, regionVector.w);
 
@@ -833,7 +834,7 @@ const Vector4& Theme::Skin::getColor() const
 {
     return _color;
 }
-    
+
 /**
  * Theme utility methods.
  */

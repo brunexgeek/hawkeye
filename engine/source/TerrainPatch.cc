@@ -1,3 +1,4 @@
+#include <sstream>
 #include <hawkeye/Base.hh>
 #include <hawkeye/TerrainPatch.hh>
 #include <hawkeye/Terrain.hh>

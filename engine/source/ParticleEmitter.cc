@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/ParticleEmitter.hh>
 #include <hawkeye/Game.hh>
@@ -77,7 +78,7 @@ ParticleEmitter* ParticleEmitter::create(const char* url)
         GP_ERROR("Failed to create particle emitter from file.");
         return NULL;
     }
-    
+
     ParticleEmitter* particle = create((strlen(properties->getNamespace()) > 0) ? properties : properties->getNextNamespace());
     SAFE_DELETE(properties);
 
@@ -118,7 +119,7 @@ ParticleEmitter* ParticleEmitter::create(Properties* properties)
     bool spriteAnimated = sprite->getBool("animated");
     bool spriteLooped = sprite->getBool("looped");
     int spriteFrameCount = sprite->getInt("frameCount");
-    int spriteFrameRandomOffset = min(sprite->getInt("frameRandomOffset"), spriteFrameCount);
+    int spriteFrameRandomOffset = std::min(sprite->getInt("frameRandomOffset"), spriteFrameCount);
     float spriteFrameDuration = sprite->getFloat("frameDuration");
 
     // Emitter properties.
@@ -788,7 +789,7 @@ void ParticleEmitter::generateVectorInEllipsoid(const Vector3& center, const Vec
         dst->y = MATH_RANDOM_MINUS1_1();
         dst->z = MATH_RANDOM_MINUS1_1();
     } while (dst->length() > 1.0f);
-    
+
     // Scale this point by the scaling vector.
     dst->x *= scale.x;
     dst->y *= scale.y;
@@ -867,7 +868,7 @@ void ParticleEmitter::update(float elapsedTime)
     static double runningTime = 0;
     runningTime += elapsedTime;
     if (runningTime < PARTICLE_UPDATE_RATE_MAX)
-        return;    
+        return;
 
     float elapsedMs = runningTime;
     runningTime = 0;

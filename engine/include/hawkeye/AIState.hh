@@ -1,6 +1,7 @@
 #ifndef AISTATE_H_
 #define AISTATE_H_
 
+#include <map>
 #include <hawkeye/Ref.hh>
 
 namespace hawkeye {

@@ -2,6 +2,7 @@
 #include <hawkeye/PhysicsGhostObject.hh>
 #include <hawkeye/Node.hh>
 #include <hawkeye/Game.hh>
+#include <hawkeye/DebugNew.hh>
 
 namespace hawkeye
 {

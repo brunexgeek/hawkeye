@@ -1,3 +1,4 @@
+#include <cstring>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Mesh.hh>
 #include <hawkeye/MeshPart.hh>
@@ -8,8 +9,8 @@
 namespace hawkeye
 {
 
-Mesh::Mesh(const VertexFormat& vertexFormat) 
-    : _vertexFormat(vertexFormat), _vertexCount(0), _vertexBuffer(0), _primitiveType(TRIANGLES), 
+Mesh::Mesh(const VertexFormat& vertexFormat)
+    : _vertexFormat(vertexFormat), _vertexCount(0), _vertexBuffer(0), _primitiveType(TRIANGLES),
       _partCount(0), _parts(NULL), _dynamic(false)
 {
 }
@@ -190,14 +191,14 @@ Mesh* Mesh::createBoundingBox(const BoundingBox& box)
         corners[0].x, corners[0].y, corners[0].z,
         corners[7].x, corners[7].y, corners[7].z,
         corners[4].x, corners[4].y, corners[4].z,
-        corners[3].x, corners[3].y, corners[3].z, 
+        corners[3].x, corners[3].y, corners[3].z,
         corners[0].x, corners[0].y, corners[0].z,
         corners[0].x, corners[0].y, corners[0].z,
         corners[1].x, corners[1].y, corners[1].z,
         corners[2].x, corners[2].y, corners[2].z,
-        corners[3].x, corners[3].y, corners[3].z, 
+        corners[3].x, corners[3].y, corners[3].z,
         corners[4].x, corners[4].y, corners[4].z,
-        corners[5].x, corners[5].y, corners[5].z, 
+        corners[5].x, corners[5].y, corners[5].z,
         corners[2].x, corners[2].y, corners[2].z,
         corners[1].x, corners[1].y, corners[1].z,
         corners[6].x, corners[6].y, corners[6].z,

@@ -1,6 +1,11 @@
+#include <memory>
+#include <cstring>
+#include <cassert>
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Image.hh>
 #include <hawkeye/Texture.hh>
+#include <hawkeye/Logger.hh>
 #include <hawkeye/FileSystem.hh>
 
 // PVRTC (GL_IMG_texture_compression_pvrtc) : Imagination based gpus
@@ -290,7 +295,7 @@ Texture* Texture::create(Format format, unsigned int width, unsigned int height,
     	GL_ASSERT( glTexParameteri(target, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE) );
 #if !defined(OPENGL_ES) || defined(GL_ES_VERSION_3_0) && GL_ES_VERSION_3_0
     	GL_ASSERT( glTexParameteri(target, GL_TEXTURE_COMPARE_MODE, GL_NONE) );
-#endif    	
+#endif
     }
     else
     {

@@ -1,3 +1,5 @@
+#include <algorithm>
+#include <cmath>
 #include <hawkeye/Base.hh>
 #include <hawkeye/BoundingSphere.hh>
 #include <hawkeye/BoundingBox.hh>
@@ -297,8 +299,8 @@ void BoundingSphere::transform(const Matrix& matrix)
     Vector3 scale;
     matrix.decompose(&scale, NULL, NULL);
     float r = radius * scale.x;
-    r = max(r, radius * scale.y);
-    r = max(r, radius * scale.z);
+    r = std::max(r, radius * scale.y);
+    r = std::max(r, radius * scale.z);
     radius = r;
 }
 

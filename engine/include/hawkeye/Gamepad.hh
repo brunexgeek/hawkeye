@@ -1,6 +1,7 @@
 #ifndef GAMEPAD_H_
 #define GAMEPAD_H_
 
+#include <string>
 #include <hawkeye/Vector2.hh>
 
 namespace hawkeye
@@ -39,7 +40,7 @@ public:
      * Gamepad buttons.
      */
     enum ButtonMapping
-    {        
+    {
         BUTTON_A,
         BUTTON_B,
         BUTTON_X,
@@ -66,14 +67,14 @@ public:
      */
     unsigned int getButtonCount() const;
 
-    /** 
+    /**
      * Gets whether the given button is currently pressed down.
      *
      * @param button The enum of the button on the gamepad to get the state for.
      * @return Whether the button is currently pressed or not.
      */
     bool isButtonDown(ButtonMapping button) const;
-    
+
     /**
      * Gets the number of joysticks on the gamepad.
      *
@@ -150,14 +151,14 @@ private:
      * Constructs a gamepad from the specified .form file.
      *
      * @param formPath The path the the .form file.
-     */ 
+     */
     Gamepad(const char* formPath);
 
     /**
      * Constructs a physical gamepad.
      *
      * @param handle The gamepad handle
-     * @param buttonCount the number of buttons on the gamepad. 
+     * @param buttonCount the number of buttons on the gamepad.
      * @param joystickCount the number of joysticks on the gamepad.
      * @param triggerCount the number of triggers on the gamepad.
      * @param name The product/device name.
@@ -169,7 +170,7 @@ private:
      */
     Gamepad(const Gamepad& copy);
 
-    /** 
+    /**
      * Destructor.
      */
     virtual ~Gamepad();
@@ -197,7 +198,7 @@ private:
     void setJoystickValue(unsigned int index, float x, float y);
 
     void setTriggerValue(unsigned int index, float value);
-    
+
     void bindGamepadControls(Container* container);
 
     GamepadHandle _handle;

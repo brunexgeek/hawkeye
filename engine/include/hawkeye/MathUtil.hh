@@ -73,10 +73,5 @@ private:
 
 #define MATRIX_SIZE ( sizeof(float) * 16)
 
-#ifdef GP_USE_NEON
-#include <hawkeye/MathUtilNeon.inlh>
-#else
-
-#endif
 
 #endif

@@ -1,3 +1,5 @@
+#include <cstdlib>
+#include <cstring>
 #include <hawkeye/Base.hh>
 #include <hawkeye/VertexFormat.hh>
 

@@ -1,8 +1,13 @@
+#include <cstdlib>
+#include <cassert>
+#include <cmath>
+#include <cstring>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Matrix.hh>
 #include <hawkeye/Plane.hh>
 #include <hawkeye/Quaternion.hh>
 #include <hawkeye/MathUtil.hh>
+#include <hawkeye/Logger.hh>
 
 namespace hawkeye
 {

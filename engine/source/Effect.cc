@@ -1,3 +1,4 @@
+#include <memory>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Effect.hh>
 #include <hawkeye/FileSystem.hh>
@@ -80,7 +81,7 @@ Effect* Effect::createFromFile(const char* vshPath, const char* fshPath, const c
     }
 
     Effect* effect = createFromSource(vshPath, vshSource, fshPath, fshSource, defines);
-    
+
     SAFE_DELETE_ARRAY(vshSource);
     SAFE_DELETE_ARRAY(fshSource);
 
@@ -165,7 +166,7 @@ static void replaceIncludes(const char* filepath, const char* source, std::strin
         // If "#include" is found
         if (headPos != std::string::npos)
         {
-            // append from our last position for the legth (head - last position) 
+            // append from our last position for the legth (head - last position)
             out.append(str.substr(lastPos,  headPos - lastPos));
 
             // find the start quote "
@@ -187,7 +188,7 @@ static void replaceIncludes(const char* filepath, const char* source, std::strin
 
             // jump the head position past the end quote
             headPos = endQuote + 1;
-            
+
             // File path to include and 'stitch' in the value in the quotes to the file path and source it.
             std::string filepathStr = filepath;
             std::string directoryPath = filepathStr.substr(0, filepathStr.rfind('/') + 1);
@@ -243,7 +244,7 @@ Effect* Effect::createFromSource(const char* vshPath, const char* vshSource, con
     // Replace all comma separated definitions with #define prefix and \n suffix
     std::string definesStr = "";
     replaceDefines(defines, definesStr);
-    
+
     shaderSource[0] = definesStr.c_str();
     shaderSource[1] = "\n";
     std::string vshSourceStr = "";
@@ -313,7 +314,7 @@ Effect* Effect::createFromSource(const char* vshPath, const char* vshSource, con
             GL_ASSERT( glGetShaderInfoLog(fragmentShader, length, NULL, infoLog) );
             infoLog[length-1] = '\0';
         }
-        
+
         // Write out the expanded shader file.
         if (fshPath)
             writeShaderToErrorFile(fshPath, shaderSource[2]);
@@ -610,7 +611,7 @@ void Effect::setValue(Uniform* uniform, const Texture::Sampler* sampler)
     GP_ASSERT(uniform);
     GP_ASSERT(uniform->_type == GL_SAMPLER_2D || uniform->_type == GL_SAMPLER_CUBE);
     GP_ASSERT(sampler);
-    GP_ASSERT((sampler->getTexture()->getType() == Texture::TEXTURE_2D && uniform->_type == GL_SAMPLER_2D) || 
+    GP_ASSERT((sampler->getTexture()->getType() == Texture::TEXTURE_2D && uniform->_type == GL_SAMPLER_2D) ||
         (sampler->getTexture()->getType() == Texture::TEXTURE_CUBE && uniform->_type == GL_SAMPLER_CUBE));
 
     GL_ASSERT( glActiveTexture(GL_TEXTURE0 + uniform->_index) );
@@ -631,7 +632,7 @@ void Effect::setValue(Uniform* uniform, const Texture::Sampler** values, unsigne
     GLint units[32];
     for (unsigned int i = 0; i < count; ++i)
     {
-        GP_ASSERT((const_cast<Texture::Sampler*>(values[i])->getTexture()->getType() == Texture::TEXTURE_2D && uniform->_type == GL_SAMPLER_2D) || 
+        GP_ASSERT((const_cast<Texture::Sampler*>(values[i])->getTexture()->getType() == Texture::TEXTURE_2D && uniform->_type == GL_SAMPLER_2D) ||
             (const_cast<Texture::Sampler*>(values[i])->getTexture()->getType() == Texture::TEXTURE_CUBE && uniform->_type == GL_SAMPLER_CUBE));
         GL_ASSERT( glActiveTexture(GL_TEXTURE0 + uniform->_index + i) );
 

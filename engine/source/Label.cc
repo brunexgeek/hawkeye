@@ -1,3 +1,4 @@
+#include <cstring>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Label.hh>
 

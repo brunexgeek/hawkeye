@@ -318,6 +318,11 @@ public:
      */
     void removeListener(Camera::Listener* listener);
 
+    /**
+     * Sets the node associated with this camera.
+     */
+    void setNode(Node* node);
+
 private:
 
     /**
@@ -347,11 +352,6 @@ private:
      * @return The newly created camera.
      */
     Camera* clone(NodeCloneContext& context);
-
-    /**
-     * Sets the node associated with this camera.
-     */
-    void setNode(Node* node);
 
     /**
      * @see Transform::Listener::transformChanged

@@ -1,6 +1,7 @@
 #ifndef MESH_H_
 #define MESH_H_
 
+#include <string>
 #include <hawkeye/Ref.hh>
 #include <hawkeye/VertexFormat.hh>
 #include <hawkeye/Vector3.hh>

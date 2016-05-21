@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Container.hh>
 #include <hawkeye/Layout.hh>

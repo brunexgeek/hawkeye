@@ -4,6 +4,7 @@
  * Much of the collision detection code for this implementation is based off the
  * btbtKinematicCharacterController class from Bullet Physics 2.7.6.
  */
+#include <cmath>
 #include <hawkeye/Base.hh>
 #include <hawkeye/PhysicsCharacter.hh>
 #include <hawkeye/Scene.hh>
@@ -34,7 +35,7 @@ public:
     btScalar addSingleResult(btCollisionWorld::LocalConvexResult& convexResult, bool normalInWorldSpace)
     {
         PhysicsCollisionObject* object = reinterpret_cast<PhysicsCollisionObject*>(convexResult.m_hitCollisionObject->getUserPointer());
-        
+
         GP_ASSERT(object);
         if (object == _me || object->getType() == PhysicsCollisionObject::GHOST_OBJECT)
             return 1.0f;
@@ -266,7 +267,7 @@ void PhysicsCharacter::jump(float height, bool force)
 void PhysicsCharacter::updateCurrentVelocity()
 {
     GP_ASSERT(_node);
-    
+
     Vector3 temp;
     btScalar velocity2 = 0;
 
@@ -503,7 +504,7 @@ void PhysicsCharacter::stepDown(btCollisionWorld* collisionWorld, btScalar time)
     // Calculate what the vertical velocity actually is.
     // In cases where the character might not actually be able to move down,
     // but isn't intersecting with an object straight down either, we don't
-    // want to keep increasing the vertical velocity until the character 
+    // want to keep increasing the vertical velocity until the character
     // randomly drops through the floor when it can finally move due to its
     // vertical velocity having such a great magnitude.
     if (!_verticalVelocity.isZero() && time > 0.0f)
@@ -695,7 +696,7 @@ void PhysicsCharacter::updateAction(btCollisionWorld* collisionWorld, btScalar d
     // Process movement in the up direction.
     if (_physicsEnabled)
         stepUp(collisionWorld, deltaTimeStep);
-    
+
     // Process horizontal movement.
     stepForwardAndStrafe(collisionWorld, deltaTimeStep);
 

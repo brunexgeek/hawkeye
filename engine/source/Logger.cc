@@ -1,4 +1,4 @@
-
+#include <cstdarg>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Game.hh>
 #include <hawkeye/ScriptController.hh>

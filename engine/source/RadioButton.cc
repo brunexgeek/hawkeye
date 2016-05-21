@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/RadioButton.hh>
 
@@ -187,7 +188,7 @@ unsigned int RadioButton::drawImages(Form* form, const Rectangle& clip)
         return 0;
 
     // Left, v-center.
-    // TODO: Set an alignment for radio button images.   
+    // TODO: Set an alignment for radio button images.
     const Rectangle& region = _image->getRegion();
     const Theme::UVs& uvs = _image->getUVs();
     Vector4 color = _image->getColor();

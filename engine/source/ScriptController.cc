@@ -1,3 +1,5 @@
+#include <algorithm>
+#include <sstream>
 #include <hawkeye/Base.hh>
 #include <hawkeye/FileSystem.hh>
 #include <hawkeye/ScriptController.hh>

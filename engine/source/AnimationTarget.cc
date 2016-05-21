@@ -1,3 +1,4 @@
+#include <cstring>
 #include <hawkeye/Base.hh>
 #include <hawkeye/AnimationTarget.hh>
 #include <hawkeye/Animation.hh>
@@ -278,7 +279,7 @@ Animation* AnimationTarget::createAnimation(const char* id, Properties* animatio
             animation->getClip()->setRepeatCount(value);
         }
     }
-    
+
     SAFE_DELETE_ARRAY(keyOut);
     SAFE_DELETE_ARRAY(keyIn);
     SAFE_DELETE_ARRAY(keyValues);
@@ -295,7 +296,7 @@ Animation* AnimationTarget::createAnimation(const char* id, Properties* animatio
         }
         animation->createClips(animationProperties, (unsigned int) frameCount);
     }
-    
+
     return animation;
 }
 

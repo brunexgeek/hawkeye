@@ -1,5 +1,7 @@
+#include <cassert>
 #include <hawkeye/Base.hh>
 #include <hawkeye/MeshPart.hh>
+#include <hawkeye/Logger.hh>
 
 namespace hawkeye
 {

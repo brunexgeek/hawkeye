@@ -1,6 +1,9 @@
 #ifndef AIMESSAGE_H_
 #define AIMESSAGE_H_
 
+
+#include <string>
+
 namespace hawkeye {
 
 /**

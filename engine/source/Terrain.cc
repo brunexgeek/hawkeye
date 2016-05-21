@@ -1,3 +1,4 @@
+#include <cmath>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Terrain.hh>
 #include <hawkeye/TerrainPatch.hh>
@@ -420,7 +421,7 @@ const Matrix& Terrain::getInverseWorldMatrix() const
         // Apply local scale and invert
         _inverseWorldMatrix.scale(_localScale);
         _inverseWorldMatrix.invert();
-        
+
     }
     return _inverseWorldMatrix;
 }
@@ -505,7 +506,7 @@ float Terrain::getHeight(float x, float z) const
     GP_ASSERT(cols > 0);
     GP_ASSERT(rows > 0);
 
-    // Since the specified coordinates are in world space, we need to use the 
+    // Since the specified coordinates are in world space, we need to use the
     // inverse of our world matrix to transform the world x,z coords back into
     // local heightfield coordinates for indexing into the height array.
     Vector3 v = getInverseWorldMatrix() * Vector3(x, 0.0f, z);

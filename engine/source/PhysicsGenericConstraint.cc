@@ -2,6 +2,7 @@
 #include <hawkeye/PhysicsGenericConstraint.hh>
 #include <hawkeye/Node.hh>
 #include <hawkeye/PhysicsRigidBody.hh>
+#include <hawkeye/DebugNew.hh>
 
 namespace hawkeye
 {

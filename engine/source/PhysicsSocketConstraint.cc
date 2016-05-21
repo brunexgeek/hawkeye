@@ -1,3 +1,4 @@
+#include <hawkeye/DebugNew.hh>
 #include <hawkeye/Base.hh>
 #include <hawkeye/PhysicsSocketConstraint.hh>
 #include <hawkeye/Node.hh>
@@ -24,7 +25,7 @@ PhysicsSocketConstraint::PhysicsSocketConstraint(PhysicsRigidBody* a, PhysicsRig
     }
 }
 
-PhysicsSocketConstraint::PhysicsSocketConstraint(PhysicsRigidBody* a, const Vector3& translationOffsetA, 
+PhysicsSocketConstraint::PhysicsSocketConstraint(PhysicsRigidBody* a, const Vector3& translationOffsetA,
                                                  PhysicsRigidBody* b, const Vector3& translationOffsetB)
     : PhysicsConstraint(a, b)
 {

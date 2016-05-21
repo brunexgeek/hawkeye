@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Bundle.hh>
 #include <hawkeye/FileSystem.hh>
@@ -6,7 +7,7 @@
 #include <hawkeye/Joint.hh>
 
 // Minimum version numbers supported
-#define BUNDLE_VERSION_MAJOR_REQUIRED   1 
+#define BUNDLE_VERSION_MAJOR_REQUIRED   1
 #define BUNDLE_VERSION_MINOR_REQUIRED   2
 
 #define BUNDLE_TYPE_SCENE               1
@@ -210,7 +211,7 @@ Bundle* Bundle::create(const char* path)
         GP_WARN("Failed to read GPB version for bundle '%s'.", path);
         return NULL;
     }
-    // Check for the minimal 
+    // Check for the minimal
     if (version[0] != BUNDLE_VERSION_MAJOR_REQUIRED || version[1] < BUNDLE_VERSION_MINOR_REQUIRED)
     {
         SAFE_DELETE(stream);

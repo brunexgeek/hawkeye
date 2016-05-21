@@ -1,3 +1,4 @@
+#include <cmath>
 #include <hawkeye/Base.hh>
 #include <hawkeye/Plane.hh>
 #include <hawkeye/Frustum.hh>

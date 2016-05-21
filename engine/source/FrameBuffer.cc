@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/FrameBuffer.hh>
 #include <hawkeye/Game.hh>
@@ -12,7 +13,7 @@ std::vector<FrameBuffer*> FrameBuffer::_frameBuffers;
 FrameBuffer* FrameBuffer::_defaultFrameBuffer = NULL;
 FrameBuffer* FrameBuffer::_currentFrameBuffer = NULL;
 
-FrameBuffer::FrameBuffer(const char* id, unsigned int width, unsigned int height, FrameBufferHandle handle) 
+FrameBuffer::FrameBuffer(const char* id, unsigned int width, unsigned int height, FrameBufferHandle handle)
     : _id(id ? id : ""), _handle(handle), _renderTargets(NULL), _renderTargetCount(0), _depthStencilTarget(NULL)
 {
 }
@@ -94,7 +95,7 @@ FrameBuffer* FrameBuffer::create(const char* id, unsigned int width, unsigned in
     GLuint handle = 0;
     GL_ASSERT( glGenFramebuffers(1, &handle) );
     FrameBuffer* frameBuffer = new FrameBuffer(id, width, height, handle);
-    
+
     // Create the render target array for the new frame buffer
     frameBuffer->_renderTargets = new RenderTarget*[_maxRenderTargets];
     memset(frameBuffer->_renderTargets, 0, sizeof(RenderTarget*) * _maxRenderTargets);
@@ -200,7 +201,7 @@ void FrameBuffer::setRenderTarget(RenderTarget* target, unsigned int index, GLen
         {
             attachment = GL_DEPTH_ATTACHMENT;
             GL_ASSERT( glFramebufferTexture2D(GL_FRAMEBUFFER, attachment, textureTarget, _renderTargets[index]->getTexture()->getHandle(), 0));
-#ifndef OPENGL_ES            
+#ifndef OPENGL_ES
             glDrawBuffer(GL_NONE);
             glReadBuffer(GL_NONE);
 #elif defined(GL_ES_VERSION_3_0) && GL_ES_VERSION_3_0

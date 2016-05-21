@@ -1,4 +1,5 @@
 #include <hawkeye/Base.hh>
+#include <cstring>
 #include <hawkeye/Animation.hh>
 #include <hawkeye/AnimationController.hh>
 #include <hawkeye/AnimationClip.hh>
@@ -458,12 +459,12 @@ Animation* Animation::clone(Channel* channel, AnimationTarget* target)
     GP_ASSERT(animation->getRefCount() == 1);
 
     // Clone the clips
-    
+
     if (_defaultClip)
     {
         animation->_defaultClip = _defaultClip->clone(animation);
     }
-    
+
     if (_clips)
     {
         for (std::vector<AnimationClip*>::iterator it = _clips->begin(); it != _clips->end(); ++it)

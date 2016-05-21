@@ -1,6 +1,7 @@
 #include <hawkeye/Base.hh>
 #include <hawkeye/PhysicsHingeConstraint.hh>
 #include <hawkeye/Node.hh>
+#include <hawkeye/DebugNew.hh>
 
 namespace hawkeye
 {
@@ -43,7 +44,7 @@ PhysicsHingeConstraint::PhysicsHingeConstraint(PhysicsRigidBody* a, const Quater
     }
 }
 
-    
+
 PhysicsHingeConstraint::~PhysicsHingeConstraint()
 {
     // Unused

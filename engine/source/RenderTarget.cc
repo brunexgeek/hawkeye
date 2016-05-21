@@ -1,3 +1,7 @@
+#include <cstring>
+#include <algorithm>
+#include <cassert>
+#include <hawkeye/Logger.hh>
 #include <hawkeye/Base.hh>
 #include <hawkeye/RenderTarget.hh>
 

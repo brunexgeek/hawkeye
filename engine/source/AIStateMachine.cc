@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/AIStateMachine.hh>
 #include <hawkeye/AIAgent.hh>

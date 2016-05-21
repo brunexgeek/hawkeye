@@ -1,3 +1,5 @@
+#include <algorithm>
+#include <cstring>
 #include <hawkeye/Base.hh>
 #include <hawkeye/DepthStencilTarget.hh>
 
@@ -43,7 +45,7 @@ DepthStencilTarget* DepthStencilTarget::create(const char* id, Format format, un
     GL_ASSERT( glGenRenderbuffers(1, &depthStencilTarget->_depthBuffer) );
     GL_ASSERT( glBindRenderbuffer(GL_RENDERBUFFER, depthStencilTarget->_depthBuffer) );
 
-    // First try to add storage for the most common standard GL_DEPTH24_STENCIL8 
+    // First try to add storage for the most common standard GL_DEPTH24_STENCIL8
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, width, height);
 
     // Fall back to less common GLES2 extension combination for seperate depth24 + stencil8 or depth16 + stencil8

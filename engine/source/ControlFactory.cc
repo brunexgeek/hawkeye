@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <hawkeye/Base.hh>
 #include <hawkeye/ControlFactory.hh>
 #include <hawkeye/Label.hh>
@@ -15,7 +16,7 @@ namespace hawkeye
 
 static ControlFactory* __controlFactory = NULL;
 
-ControlFactory::ControlFactory() 
+ControlFactory::ControlFactory()
 {
 	registerStandardControls();
 }
@@ -24,7 +25,7 @@ ControlFactory::ControlFactory(const ControlFactory& copy)
 {
 }
 
-ControlFactory::~ControlFactory() 
+ControlFactory::~ControlFactory()
 {
 }
 
@@ -33,7 +34,7 @@ void ControlFactory::finalize()
     SAFE_DELETE(__controlFactory);
 }
 
-ControlFactory* ControlFactory::getInstance() 
+ControlFactory* ControlFactory::getInstance()
 {
 	if (__controlFactory == NULL)
 		__controlFactory = new ControlFactory();
@@ -76,7 +77,7 @@ Control *ControlFactory::createControl(const char* typeName, Theme::Style* style
     return (*it->second)(style, properties);
 }
 
-void ControlFactory::registerStandardControls() 
+void ControlFactory::registerStandardControls()
 {
     registerCustomControl("LABEL", &Label::create);
     registerCustomControl("BUTTON", &Button::create);

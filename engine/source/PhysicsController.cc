@@ -1,3 +1,5 @@
+#include <algorithm>
+#include <cmath>
 #include <hawkeye/Base.hh>
 #include <hawkeye/PhysicsController.hh>
 #include <hawkeye/PhysicsRigidBody.hh>
@@ -7,6 +9,7 @@
 #include <hawkeye/Bundle.hh>
 #include <hawkeye/Terrain.hh>
 #include <hawkeye/MeshBatch.hh>
+#include <hawkeye/DebugNew.hh>
 
 #ifdef GP_USE_MEM_LEAK_DETECTION
 #undef new

@@ -1,4 +1,7 @@
+#include <cassert>
+#include <algorithm>
 #include <hawkeye/Base.hh>
+#include <hawkeye/Logger.hh>
 #include <hawkeye/VertexAttributeBinding.hh>
 #include <hawkeye/Mesh.hh>
 #include <hawkeye/Effect.hh>

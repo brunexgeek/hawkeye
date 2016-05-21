@@ -1,6 +1,7 @@
 #ifndef HAWKEYE_PAL_AUDIOBUFFER_HH
 #define HAWKEYE_PAL_AUDIOBUFFER_HH
 
+#include <memory>
 #include <hawkeye/Ref.hh>
 #include <hawkeye/Stream.hh>
 #include <hawkeye/AudioBuffer.hh>

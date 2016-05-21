@@ -1,3 +1,4 @@
+#include <memory>
 #include <hawkeye/Base.hh>
 #include <hawkeye/FileSystem.hh>
 #include <hawkeye/Properties.hh>
@@ -42,13 +43,13 @@ static void makepath(std::string path, int mode)
         std::string dir = (index == -1 ) ? path : path.substr(0, index);
         if (dir.length() > 0)
             dirs.push_back(dir);
-        
+
         if (index + 1 >= path.length() || index == -1)
             break;
-            
+
         path = path.substr(index + 1);
     }
-    
+
     struct stat s;
     std::string dirPath;
     for (unsigned int i = 0; i < dirs.size(); i++)
@@ -94,7 +95,7 @@ static std::map<std::string, std::string> __aliases;
  * Gets the fully resolved path.
  * If the path is relative then it will be prefixed with the resource path.
  * Aliases will be converted to a relative path.
- * 
+ *
  * @param path The path to resolve.
  * @param fullPath The full resolved path. (out param)
  */
@@ -112,14 +113,14 @@ static void getFullPath(const char* path, std::string& fullPath)
 }
 
 /**
- * 
+ *
  * @script{ignore}
  */
 class FileStream : public Stream
 {
 public:
     friend class FileSystem;
-    
+
     ~FileStream();
     virtual bool canRead();
     virtual bool canWrite();
@@ -148,14 +149,14 @@ private:
 #ifdef __ANDROID__
 
 /**
- * 
+ *
  * @script{ignore}
  */
 class FileStreamAndroid : public Stream
 {
 public:
     friend class FileSystem;
-    
+
     ~FileStreamAndroid();
     virtual bool canRead();
     virtual bool canWrite();
@@ -263,7 +264,7 @@ bool FileSystem::listFiles(const char* dirPath, std::vector<std::string>& files)
 
     WIN32_FIND_DATA FindFileData;
     HANDLE hFind = FindFirstFile(wPath.c_str(), &FindFileData);
-    if (hFind == INVALID_HANDLE_VALUE) 
+    if (hFind == INVALID_HANDLE_VALUE)
     {
         return false;
     }
@@ -418,7 +419,7 @@ FILE* FileSystem::openFile(const char* filePath, const char* mode)
     getFullPath(filePath, fullPath);
 
     createFileFromAsset(filePath);
-    
+
     FILE* fp = fopen(fullPath.c_str(), mode);
     return fp;
 }
@@ -451,7 +452,7 @@ char* FileSystem::readAll(const char* filePath, int* fileSize)
 
     if (fileSize)
     {
-        *fileSize = (int)size; 
+        *fileSize = (int)size;
     }
     return buffer;
 }
@@ -594,7 +595,7 @@ std::string FileSystem::getExtension(const char* path)
 FileStream::FileStream(FILE* file)
     : _file(file), _canRead(false), _canWrite(false)
 {
-    
+
 }
 
 FileStream::~FileStream()
